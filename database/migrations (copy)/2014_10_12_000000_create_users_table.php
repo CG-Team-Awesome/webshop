@@ -28,8 +28,8 @@ class CreateUsersTable extends Migration
             $table->string('city');
             $table->string('country');
             $table->string('website');
-            $table->unsignedBigInteger('postal_code');
-            $table->unsignedBigInteger('phone_number');
+            $table->varchar('postal_code');
+            $table->number('phone_number');
             $table->boolean('company');
             // $table->softdelete();
 
