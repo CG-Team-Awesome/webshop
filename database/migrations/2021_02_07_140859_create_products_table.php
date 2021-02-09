@@ -29,6 +29,7 @@ class CreateProductsTable extends Migration
 	        $table->string('strap_color');
             $table->string('watch_tech');
             $table->string('size');
+            $table->timestamps();
             // $table->softdelete();
 
             $table->foreign('category_id')

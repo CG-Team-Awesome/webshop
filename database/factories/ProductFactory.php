@@ -3,6 +3,9 @@
 namespace Database\Factories;
 
 use App\Models\Product;
+use App\Models\Supplier;
+use App\Models\TaxGroup;
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 
@@ -22,18 +25,21 @@ class ProductFactory extends Factory
      */
     public function definition()
     {
-        static $product_number = 1; 
         return [
-        'product_number' => $this->product_number++,
+        'product_number' => $this->faker->numberBetween($min = 1, $max = 99),
         'name' => $this->faker->name,
         'tagline' => $this->faker->sentence,
         'description' => $this->faker->paragraph,
-        'in_stock' => $this->faker->number,
+        'in_stock' => $this->faker->numberBetween($min = 1, $max = 99),
         'available_until' => $this->faker->date,
-        'supplier_id' => $this->faker->integer , // <--- hier oppakken
-        'price' => $this->faker->price,
+        'supplier_id' => Supplier::factory(),
+        'price' => $this->faker->numberBetween($min = 1, $max = 99),
         'picture' => $this->faker->url,
-        'category_id' => $this->faker->integer
+        'tax_group' => TaxGroup::factory(),
+        'category_id' => Category::factory(),
+        'strap_color' => $this->faker->string(),
+        'watch_tech' => $this->faker->string(),
+        'size' => $this->faker->string()
         ];
     }
 }
