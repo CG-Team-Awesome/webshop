@@ -18,6 +18,31 @@ Route::get('/', function () {
 });
 
 Route::get('/profile', function () {
-
     return view('profile');
+});
+
+
+
+
+Route::get('/buy', function () {
+    return view('buy');
+});
+
+Route::get('/buy2', function () {
+    return view('buy2');
+});
+
+Route::get('/congrats', function () {
+    return view('congrats');
+});
+
+
+
+
+Route::get('/register', function () {
+    return view('register');
+});
+
+Route::get('/edit', function () {
+    return view('edit');
 });

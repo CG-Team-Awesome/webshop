@@ -1,13 +1,12 @@
-body {
-    height: 100vh;
-    width: 100vw;
-    max-width: 100%;
-    overflow-x: hidden;
-    background-color: black;
-}
-
+@import 'partials/main.scss';
 @import 'partials/welcome.scss';
-@import 'partials/profile.scss';
 
 
+@import 'partials/user/profile.scss';
+@import 'partials/user/register.scss';
+@import 'partials/user/edit.scss';
+
+
+@import 'partials/product/buy.scss';
+@import 'partials/product/congrats.scss';
 
