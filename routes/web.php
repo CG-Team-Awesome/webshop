@@ -17,32 +17,36 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/profile', function () {
-    return view('profile');
-});
-
-
 
 
 Route::get('/buy', function () {
-    return view('buy');
+    return view('/product/buy');
 });
-
 Route::get('/buy2', function () {
-    return view('buy2');
+    return view('/product/buy2');
 });
-
 Route::get('/congrats', function () {
-    return view('congrats');
+    return view('/product/congrats');
 });
 
 
 
 
 Route::get('/register', function () {
-    return view('register');
+    return view('/user/register');
+});
+Route::get('/edit', function () {
+    return view('/user/edit');
+});
+Route::get('/login', function () {
+    return view('/user/login');
+});
+Route::get('/profile', function () {
+    return view('/user/profile');
 });
 
-Route::get('/edit', function () {
-    return view('edit');
+
+
+Route::get('/product/show', function () {
+    return view('/product/show');
 });
