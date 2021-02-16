@@ -19,6 +19,7 @@
                             <li class="text-white">Email</li>
                         </ul>
                     </div>
+                    <a href="/edit"><button class="btn btn-warning pp_edit_btn1">Edit</button></a>
                 </div>
                 <div class="ppl_bot d-flex justify-content-center align-items-center col">
                     <div class="col">Total Orders</div>

@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// HOME
 Route::get('/', function () {
     return view('welcome');
 });
@@ -25,7 +26,7 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 
-//cart
+// CART pages
 Route::get('/buy', function () {
     return view('/product/buy');
 });
@@ -36,8 +37,12 @@ Route::get('/congrats', function () {
     return view('/product/congrats');
 });
 
+// PRODUCT PAGES
+Route::get('show', function () {
+    return view('/product/show');
+});
 
-//user
+// USER PAGES
 Route::get('/edit', function () {
     return view('/user/edit');
 });
@@ -45,7 +50,19 @@ Route::get('/profile', function () {
     return view('/user/profile');
 });
 
-//product
-Route::get('/product/show', function () {
-    return view('/product/show');
+// ADMIN PAGES
+Route::get('/admin/', function () {
+    return view('/admin/login');
+});
+Route::get('/admin/login', function () {
+    return view('/admin/login');
+});
+Route::get('/admin/productlist', function () {
+    return view('/admin/productlist');
+});
+Route::get('/admin/add', function () {
+    return view('/admin/add');
+});
+Route::get('/admin/show', function () {
+    return view('/admin/show');
 });
