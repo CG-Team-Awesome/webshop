@@ -21,16 +21,16 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
 
-            $table->foreignId('role_id');
+            $table->foreignId('role_id')->default('2');
             $table->string('first_name');
-            $table->string('last_name');
-            $table->string('address');
-            $table->string('city');
-            $table->string('country');
-            $table->string('website');
-            $table->unsignedBigInteger('postal_code');
-            $table->unsignedBigInteger('phone_number');
-            $table->boolean('company');
+            $table->string('last_name')->nullable();
+            $table->string('address')->nullable();
+            $table->string('city')->nullable();
+            $table->string('country')->nullable();
+            $table->string('website')->nullable();
+            $table->string('postal_code')->nullable();
+            $table->unsignedBigInteger('phone_number')->nullable();
+            $table->boolean('company')->nullable();
             // $table->softdelete();
 
             $table->foreign('role_id')

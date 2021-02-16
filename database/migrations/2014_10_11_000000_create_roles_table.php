@@ -14,12 +14,49 @@ class CreateRolesTable extends Migration
     public function up()
     {
         Schema::create('roles', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->timestamps();
             $table->string('name');
+            $table->string('label')->nullable();
+
 			// $table->softdelete();
         });
+
+        Schema::create('abilities', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->timestamps();
+            $table->string('name');
+            $table->string('label')->nullable();
+
+			// $table->softdelete();
+        });
+
+
+        Schema::create('ability_role', function (Blueprint $table) {
+            $table->unsignedBigInteger('role_id');
+            $table->unsignedBigInteger('ability_id');
+            $table->timestamps();
+
+            
+            $table->foreign('role_id')
+                    ->references('id')
+                    ->on('roles');
+            
+            $table->foreign('ability_id')
+                    ->references('id')
+                    ->on('abilities');
+
+			// $table->softdelete();
+        });
+
+
+
     }
+
+
+
+
+
 
     /**
      * Reverse the migrations.
