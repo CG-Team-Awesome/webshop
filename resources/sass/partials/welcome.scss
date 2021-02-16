@@ -1,0 +1,316 @@
+/* Start Screen Div */
+/* Start Screen Div */
+.start_screen_div {
+    background-color: hotpink;
+    height: 100vh;
+}
+
+.space_divs {
+    height: 8vh;
+}
+
+
+
+
+/* Product intro with 4 Square images */
+/* Product intro with 4 Square images */
+.product_intro_4square_div{
+    height: 100vh;
+    background-color: blue;
+    display: inline-block;
+    overflow: auto;
+}
+
+.product_intro_4square_content_div1{
+    height: auto;
+    overflow: hidden;
+}
+
+.product_intro_4square_content_div2{
+    height: auto;
+    overflow: hidden;
+}
+
+.pi4cd_text{
+    margin-top: 2em;
+    max-width: 25rem;
+}
+
+.product_intro_squaredivs1{
+    height: 20rem;
+    width: 23rem;
+    min-width: 20rem;
+    background-color: burlywood;
+    position: relative;
+}
+.product_intro_squaredivs2{
+    height: 20rem;
+    width: 23rem;
+    min-width: 20rem;
+    background-color: burlywood;
+    position: relative;
+}
+.product_intro_squaredivs3{
+    height: 20rem;
+    width: 23rem;
+    min-width: 20rem;;
+    background-color: burlywood;
+    position: relative;
+}
+.product_intro_squaredivs4{
+    height: 20rem;
+    width: 23rem;
+    min-width: 20rem;
+    background-color: burlywood;
+    position: relative;
+}
+
+.product_intro_text{
+    font-size: 1.5rem;
+}
+
+.squarediv_btn{
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+}
+
+
+
+
+/* Big Double Divs Pic Left */
+/* Big Double Divs Pic Left */
+.big_double_divs_pic_left{
+    height: 100vh;
+    background-color: green;
+    margin: 0%;
+}
+
+.bddpl_div1{
+    height: 90%;
+    background-color: grey;
+}
+
+.bddpl_div2{
+    height: 90%;
+    background-color: darkgrey;
+}
+
+.bddpl_div2_txt{
+    max-width: 15rem;
+}
+
+/* Big Double Divs Pic Right */
+/* Big Double Divs Pic Right */
+.big_double_divs_pic_right{
+    height: 100%;
+    background-color: darkolivegreen;
+    margin: 0%;
+}
+
+.bddpr_div1{
+    height: 90%;
+    background-color: bisque;
+}
+
+.bddpr_div2{
+    height: 90%;
+    background-color: blanchedalmond;
+}
+
+.bddpr_div2_txt{
+    max-width: 15rem;
+}
+
+/* Review Section Front Page */
+/* Review Section Front Page */
+.review_section_frontpage_div{
+    height: 100vh;
+    background-color: royalblue;
+    margin: 0%;
+}
+.rsf_div1{
+    height: 90%;
+    min-width: 50%;
+    background-color: salmon;
+}
+.rsf_div2{
+    height: 90%;
+    background-color: slategrey;
+}
+.rsf_div1_txt{
+    max-width: 15rem;
+}
+.rsf_div1_btn{
+    display: block;
+    margin-top: 1em;
+}
+
+.rsf_div2_box1, .rsf_div2_box2, .rsf_div2_box3, .rsf_div2_box4{
+    background-color: aquamarine;
+    height: 15rem;
+    width: 20rem;
+    overflow: hidden;
+
+}
+.rsf_div2_box1 > h2{
+    color: gold;
+    font-weight: bold;
+    font-size: 3em;
+}
+.rsf_div2_box2 > h2{
+    color: gold;
+    font-weight: bold;
+    font-size: 3em;
+}
+.rsf_div2_box3 > h2{
+    color: gold;
+    font-weight: bold;
+    font-size: 3em;
+}
+.rsf_div2_box4 > h2{
+    color: gold;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+/* Main Page Footer With Links */
+/* Main Page Footer With Links */
+.main_page_footer_with_links{
+    height: 30vh;
+    width: 100%;
+    background-color: indigo;
+    margin: 0%;
+}
+.socialmedia_divs{
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    background-color: khaki;
+
+}
+
+
+
+
+
+
+
+
+/* MOBILE BREAKPOINTS */
+/* MOBILE BREAKPOINTS */
+/* MOBILE BREAKPOINTS */
+@media screen and (max-width: 1000px) {
+    /* BIG DOUBLE PIC LEFT MOBILE*/
+    /* BIG DOUBLE PIC LEFT MOBILE*/
+    .big_double_divs_pic_left{
+        height: fit-content;
+        width: auto;
+    }
+
+    .bddpl_div1{
+        height: 100%;
+        background-color: red;
+        margin-left: 1em;
+        width: 100%;
+    }
+
+    .bddpl_div2{
+        height: 100%;
+        background-color: red;
+        margin: 0;
+        width: 100%;
+    }
+    /* BIG DOUBLE PIC RIGHT MOBILE*/
+    /* BIG DOUBLE PIC RIGHT MOBILE*/
+    .big_double_divs_pic_right{
+        height: fit-content;
+        width: auto;
+        margin: 0%;
+    }
+
+    .bddpr_div1{
+        height: 100%;
+        background-color: red;
+        width: 100%;
+    }
+
+    .bddpr_div2{
+        height: 100%;
+        background-color: red;
+        margin: 0;
+        width: 100%;
+    }
+
+
+
+    /* Square Div Page Mobile Breakpoint */
+    /* Square Div Page Mobile Breakpoint */
+    .product_intro_4square_div{
+        height: fit-content;
+        padding-bottom: 2em;
+    }
+
+    .pi4cd_text{
+        margin-top: 4em;
+    }
+
+    .product_intro_squaredivs1{
+        background-color: saddlebrown;
+    }
+    .product_intro_squaredivs2{
+        background-color: saddlebrown;
+    }
+    .product_intro_squaredivs3{
+        background-color: saddlebrown;
+    }
+    .product_intro_squaredivs4{
+        background-color: saddlebrown;
+    }
+
+    /* REVIEW SECTION FRONTPAGE MOBILE*/
+    /* REVIEW SECTION FRONTPAGE MOBILE*/
+    .review_section_frontpage_div{
+        height: fit-content;
+        width: auto;
+        margin: 0%;
+        padding-left: 0%;
+    }
+    .rsf_div1{
+        margin: 0%;
+        padding-top: 2em;
+    }
+    .rsf_div1, .rsf_div2{
+        height: fit-content;
+        width: 100%;
+        background-color: rgb(80, 26, 26);
+        margin-left: 1em;
+    }
+    .rsf_div1_btn{
+        margin-bottom: 1em;
+    }
+    .rsf_div2_box1, .rsf_div2_box2, .rsf_div2_box3, .rsf_div2_box4{
+        min-width: 100%;
+        margin-bottom: 1.5em;
+        padding-bottom: 1.5em;
+        height: fit-content;
+    }
+
+    /* MAIN PAGE FOOTER MOBILE */
+    /* MAIN PAGE FOOTER MOBILE */
+    .main_page_footer_with_links{
+        height: fit-content;
+    }
+
+
+
+
+
+
+    /* OTHER OTHER OTHER MOBILE*/
+    /* OTHER OTHER OTHER MOBILE*/
+    .space_divs{
+        display: none;
+    }
+
+}
