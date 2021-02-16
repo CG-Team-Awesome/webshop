@@ -21,9 +21,11 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+//authentication stuff
 require __DIR__.'/auth.php';
 
 
+//cart
 Route::get('/buy', function () {
     return view('/product/buy');
 });
@@ -35,23 +37,15 @@ Route::get('/congrats', function () {
 });
 
 
-
-
-Route::get('/register', function () {
-    return view('/user/register');
-});
+//user
 Route::get('/edit', function () {
     return view('/user/edit');
-});
-Route::get('/login', function () {
-    return view('/user/login');
 });
 Route::get('/profile', function () {
     return view('/user/profile');
 });
 
-
-
+//product
 Route::get('/product/show', function () {
     return view('/product/show');
 });
