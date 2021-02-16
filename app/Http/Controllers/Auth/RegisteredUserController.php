@@ -39,7 +39,7 @@ class RegisteredUserController extends Controller
         ]);
 
         Auth::login($user = User::create([
-            'first_name' => $request->name,
+            'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]));
