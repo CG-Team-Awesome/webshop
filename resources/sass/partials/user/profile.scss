@@ -1,0 +1,122 @@
+.profile_page_main{
+    height: 100vh;
+    background-color: royalblue;
+    margin: 0%;
+}
+.profile_page_div1{
+    height: 90%;
+    background-color: khaki;
+}
+
+
+
+
+
+
+
+// LEFT HALF PROFILE PAGE
+// LEFT HALF PROFILE PAGE
+.profile_page_lefthalf{
+    height: 100%;
+    background-color: indigo;
+}
+.ppl_top{
+    background-color: red;
+    height: 50%;
+    padding: 5rem;
+}
+.ppl_bot{
+    background-color: rgb(100, 8, 8);
+    height: 50%;
+    padding: 5rem;
+}
+
+
+// RIGHT HALF PROFILE PAGE
+// RIGHT HALF PROFILE PAGE
+.profile_page_righthalf{
+    height: 100%;
+    background-color: lightblue;
+}
+.ppr_1{
+    background-color: rosybrown;
+    height: 10em;
+    width: 80%;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+}
+.ppr_2{
+    background-color: rosybrown;
+    height: 10em;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+}
+.ppr_3{
+    background-color: rosybrown;
+    height: 10em;
+    width: 80%;
+    position: absolute;
+    top: 75%;
+    left: 15%;
+}
+
+.ppr_1_img, .ppr_2_img, .ppr_3_img{
+    background-color: royalblue;
+    height: 80%;
+    width: 20%;
+    margin-right: 3em;
+}
+
+.profile_btn_mob{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* MOBILE BREAKPOINTS */
+/* MOBILE BREAKPOINTS */
+/* MOBILE BREAKPOINTS */
+@media screen and (max-width: 1000px) {
+    .profile_page_main{
+        height: fit-content;
+    }
+    .ppr_1, .ppr_2, .ppr_3{
+        position: relative;
+        width: 100%;
+        left: auto;
+        margin-top: 1em;
+    }
+    .ppr_1_img, .ppr_2_img, .ppr_3_img{
+        width: 35%;
+    }
+    .profile_btn_pc{
+        display: none;
+    }
+    .profile_btn_mob{
+        display: block;
+        margin-left: 12rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .profile_page_righthalf{
+        height: fit-content;
+        background-color: lightblue;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+    }
+    .profile_page_lefthalf{
+        height: 100vh;
+        background-color: indigo;
+    }
+
+}

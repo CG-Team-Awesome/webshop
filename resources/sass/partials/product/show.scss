@@ -1,0 +1,192 @@
+.sp_slide {
+    width: 100vw;
+    height: 100vh;
+}
+.show_page_inner-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 190vw;
+}
+
+
+// SHOW PAGE LEFT HALF
+// SHOW PAGE LEFT HALF
+.sp_lefthalf {
+    background: #efdefe;
+}
+.btn-showpage1{
+    top: 90%;
+    left: 2.5%;
+    position: fixed;
+
+}
+// PRODUCT PICTURES DIV
+.sp_left_div1{
+    width: 60rem;
+    height: 40rem;
+    background-color: darkgoldenrod;
+    margin-left: 10rem;
+    margin-right: 5rem;
+    position: absolute;
+    left: 0%
+}
+// PRODUCT INFO DIV
+.sp_left_div2{
+    width: 60rem;
+    height: 40rem;
+    background-color: darkgrey;
+    margin-left: 10rem;
+    margin-right: 15rem;
+    position: absolute;
+    left: 30%;
+}
+// PRODUCT REVIEW DIV
+.sp_left_div3{
+    width: 60rem;
+    height: 40rem;
+    background-color: darksalmon;
+    margin-left: 10rem;
+    margin-right: 15rem;
+    position: absolute;
+    left: 60%;
+    padding: 3rem;
+}
+.div3_review_div{
+    height: 13rem;
+    background-color: darkseagreen;
+    margin-bottom: 2rem;
+}
+.btn-review{
+    position: relative;
+    right: -50%;
+    top: -3%;
+}
+.btn-showpage2{
+    display: none;
+}
+
+
+
+
+
+
+
+// SHOW PAGE RIGHT HALF
+// SHOW PAGE RIGHT HALF
+.sp_righthalf {
+    background: #a3f3d3;
+}
+
+
+
+
+
+// OTHER OTHER OTHER
+// OTHER OTHER OTHER
+.show_page_inner-wrapper {
+      transform: rotate(90deg) translateY(-100vh);
+      transform-origin: top left;
+}
+.show_page_outer-wrapper {
+      width: 100vh;
+      height: 100vw;
+      transform: rotate(-90deg) translateX(-100vh);
+      transform-origin: top left;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      position: absolute;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+      display:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MOBILE BREAKPOINTS */
+/* MOBILE BREAKPOINTS */
+/* MOBILE BREAKPOINTS */
+@media screen and (max-width: 1000px) {
+    .btn-showpage1{
+        display: none;
+    }
+    .show_page_inner-wrapper {
+        transform: none;
+        transform-origin: top left;
+    }
+    .show_page_outer-wrapper {
+        width: 100%;
+        height: fit-content;
+        transform: none;
+        transform-origin: top left;
+        overflow-x: hidden;
+        position: absolute;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    .sp_slide {
+        margin: 0%;
+        width: 100%;
+        height: fit-content;
+
+    }
+
+
+
+
+
+    // LEFT HALF DIV MOBILE
+    // LEFT HALF DIV MOBILE
+    .sp_lefthalf{
+        height: fit-content;
+        flex-direction: column;
+      }
+    // LEFT HALF MOBILE, PRODUCT PICTURE DIV
+    .sp_left_div1{
+        margin: 0%;
+        left: 0%;
+        position: relative;
+        width: 110%;
+    }
+    // LEFT HALF MOBILE, PRODUCT INFO DIV
+    .sp_left_div2{
+        left: 0%;
+        margin: 0%;
+        position: relative;
+        width: 110%;
+    }
+    // LEFT HALF MOBILE, REVIEW INFO DIV
+    .sp_left_div3{
+        margin: 0%;
+        left: 0%;
+        position: relative;
+        width: 110%;
+        height: fit-content;
+        padding-bottom: 1rem;
+    }
+    .btn-review{
+        margin-bottom: 5rem;
+    }
+    .btn-showpage2{
+        display: block;
+        margin-top: 3rem;
+    }
+
+}
