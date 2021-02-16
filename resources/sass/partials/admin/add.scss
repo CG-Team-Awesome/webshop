@@ -1,0 +1,66 @@
+.adm_pa_main{
+    background-color: rgb(209, 196, 180);
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 5rem;
+}
+
+.adm_pa_div1{
+    background-color: beige;
+    height: 45rem;
+    width: 95rem;
+    margin-left: 8rem;
+    margin-top: 5rem;
+}
+
+
+
+
+
+
+.btn-adm-addpd{
+    position: fixed;
+    right: 20%;
+    bottom: 20%;
+}
+
+
+
+.btn-adm-cancelpd{
+    position: fixed;
+    left: 10%;
+    bottom: 5%;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+    .btn-adm-addpd{
+        position: absolute;
+        bottom: 5%;
+        left: 65%;
+
+    }
+    .btn-adm-cancelpd{
+        position: absolute;
+        bottom: 5%;
+    }
+
+
+
+
+    .adm_pa_main{
+        height: 100vh;
+        width: 100%;
+    }
+    .adm_pa_div1{
+        height: 70vh;
+        width: 100%;
+        margin: 0%;
+    }
+}

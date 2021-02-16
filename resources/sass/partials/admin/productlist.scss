@@ -1,0 +1,66 @@
+.adm_pi_main{
+    background-color: rgb(209, 196, 180);
+    width: 100%;
+    height: fit-content;
+}
+
+.adminh1{
+    font-size: 2rem;
+    color: blueviolet;
+    background: rgba($color: #ffffff00, $alpha: 0)  ;
+    border: none;
+
+}
+
+
+
+
+.productinfo_div1, .productinfo_div2, .productinfo_div3, .productinfo_div4{
+    background-color: beige;
+    height: 15rem;
+    width: 85rem;
+    margin: 2rem;
+}
+
+.productinfo_div1_img{
+    height: 13rem;
+    width: 16rem;
+    background: cadetblue;
+    margin-right: 1rem;
+}
+
+
+
+.btn-addproduct{
+    position: fixed;
+    right: 5%;
+    bottom: 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+    .productinfo_div1, .productinfo_div2, .productinfo_div3, .productinfo_div4{
+        background-color: beige;
+        height: 20rem;
+        width: 100%;
+        margin: 1rem;
+        flex-direction: column;
+    }
+    .productinfo_h2{
+        margin: 0%;
+    }
+
+
+}

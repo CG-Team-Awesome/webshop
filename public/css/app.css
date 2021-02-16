@@ -396,6 +396,12 @@ body {
   padding: 5rem;
 }
 
+.pp_edit_btn1 {
+  position: absolute;
+  top: 85%;
+  right: 5%;
+}
+
 .profile_page_righthalf {
   height: 100%;
   background-color: lightblue;
@@ -1083,5 +1089,163 @@ body {
     display: block;
     margin-top: 3rem;
   }
+}
+
+.adm_pi_main {
+  background-color: #d1c4b4;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.adminh1 {
+  font-size: 2rem;
+  color: blueviolet;
+  background: rgba(255, 255, 255, 0);
+  border: none;
+}
+
+.productinfo_div1,
+.productinfo_div2,
+.productinfo_div3,
+.productinfo_div4 {
+  background-color: beige;
+  height: 15rem;
+  width: 85rem;
+  margin: 2rem;
+}
+
+.productinfo_div1_img {
+  height: 13rem;
+  width: 16rem;
+  background: cadetblue;
+  margin-right: 1rem;
+}
+
+.btn-addproduct {
+  position: fixed;
+  right: 5%;
+  bottom: 10%;
+}
+
+@media screen and (max-width: 1000px) {
+  .productinfo_div1,
+  .productinfo_div2,
+  .productinfo_div3,
+  .productinfo_div4 {
+    background-color: beige;
+    height: 20rem;
+    width: 100%;
+    margin: 1rem;
+    flex-direction: column;
+  }
+
+  .productinfo_h2 {
+    margin: 0%;
+  }
+}
+
+.adm_pa_main {
+  background-color: #d1c4b4;
+  width: 100%;
+  height: 100vh;
+  padding-bottom: 5rem;
+}
+
+.adm_pa_div1 {
+  background-color: beige;
+  height: 45rem;
+  width: 95rem;
+  margin-left: 8rem;
+  margin-top: 5rem;
+}
+
+.btn-adm-addpd {
+  position: fixed;
+  right: 20%;
+  bottom: 20%;
+}
+
+.btn-adm-cancelpd {
+  position: fixed;
+  left: 10%;
+  bottom: 5%;
+}
+
+@media screen and (max-width: 1000px) {
+  .btn-adm-addpd {
+    position: absolute;
+    bottom: 5%;
+    left: 65%;
+  }
+
+  .btn-adm-cancelpd {
+    position: absolute;
+    bottom: 5%;
+  }
+
+  .adm_pa_main {
+    height: 100vh;
+    width: 100%;
+  }
+
+  .adm_pa_div1 {
+    height: 70vh;
+    width: 100%;
+    margin: 0%;
+  }
+}
+
+.adm_ps_main {
+  background-color: #d1c4b4;
+  width: 100%;
+  height: 100vh;
+  padding-bottom: 5rem;
+}
+
+.adm_ps_div1 {
+  background-color: beige;
+  height: 45rem;
+  width: 95rem;
+  margin-left: 8rem;
+  margin-top: 5rem;
+}
+
+.btn-adm-editpd {
+  position: relative;
+  left: 80%;
+}
+
+.adm_sp_reviewdiv1 {
+  margin: 2rem;
+  width: 40rem;
+  height: 8rem;
+  background-color: burlywood;
+}
+
+.adm_sp_reviewdiv2 {
+  margin: 2rem;
+  width: 40rem;
+  height: 8rem;
+  background-color: burlywood;
+}
+
+.btn-adm-rv {
+  position: relative;
+  bottom: 50%;
+  right: -102%;
+}
+
+.btn-adm-rv-confirm {
+  position: relative;
+  bottom: -30%;
+  right: -80%;
+}
+
+.righthalf_asp {
+  height: 90%;
+  border-left-color: black;
+  border-left-width: 2px;
 }
 
