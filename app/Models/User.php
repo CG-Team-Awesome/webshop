@@ -17,9 +17,12 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name',
+        'first_name',
+        'last_name',
         'email',
         'password',
+        'address',
+        'postal_code', // TODO: Nullable uit de DB migrations halen bij de vereiste velden en toevoegen hier bij fillable
     ];
 
     /**
