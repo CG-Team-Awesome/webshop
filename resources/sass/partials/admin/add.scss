@@ -31,7 +31,9 @@
     left: 10%;
     bottom: 5%;
 }
-
+.btn-adm-cancelpd2{
+    display: none;
+}
 
 
 
@@ -47,8 +49,13 @@
 
     }
     .btn-adm-cancelpd{
+        display: none;
+    }
+    .btn-adm-cancelpd2{
+        display: block;
         position: absolute;
         bottom: 5%;
+        left: 15%;
     }
 
 

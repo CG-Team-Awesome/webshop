@@ -31,6 +31,7 @@
                 <input type="file" class="form-control-file" id="image_uploader" multiple>
             </div>
             <button class="btn btn-success btn-adm-addpd">Add Product</button>
+            <a href="/admin/productlist"><button class="btn btn-warning btn-adm-cancelpd2">Cancel</button></a>
           </form>
             <a href="/admin/productlist"><button class="btn btn-warning btn-adm-cancelpd">Cancel</button></a>
     <div>
