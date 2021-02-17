@@ -23,7 +23,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 //authentication stuff
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
 
 // CART pages
@@ -41,7 +41,9 @@ Route::get('/congrats', function () {
 Route::get('show', function () {
     return view('/product/show');
 });
-
+Route::get('allproducts', function () {
+    return view('/product/all');
+});
 // USER PAGES
 Route::get('/edit', function () {
     return view('/user/edit');
