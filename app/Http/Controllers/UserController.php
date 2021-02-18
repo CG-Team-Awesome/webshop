@@ -6,14 +6,7 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function create(){
-
+    public function index(){
+        return view('user/profile');
     }
-
-
-    public function store(){
-
-    }
-
-
 }
