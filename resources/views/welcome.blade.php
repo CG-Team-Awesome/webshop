@@ -30,9 +30,8 @@
 
 <div class="container-fluid start_screen_div d-flex justify-content-center align-items-center">
 
-    <p>
-        <a href="/allproducts"><button class="btn btn-warning btn-hello">All Products</button></a>
-    </p>
+    <a href="{{ Route('products.index') }}"><button class="btn btn-mau shadow-mau">Browse</button></a>
+
 </div>
 
 
@@ -42,7 +41,7 @@
 {{-- Product intro with buy options in 4 squares --}}
 <div class="container-fluid product_intro_4square_div d-flex justify-content-center align-items-center flex-column">
     <div class="product_intro_4square_content_div1 mb-5">
-        <p class="text-white pi4cd_text product_intro_text text-center row aln-center col-4 col-6-medium">
+        <p class="text-white pi4cd_text product_intro_text text-center row aln-center col-4 col-6-medium text-font">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Odit sapiente molestias quos asperiores. Doloremque, dignissimos quasi.
             Recusandae consequuntur rerum ab laudantium, voluptate sapiente eligendi distinctio ducimus temporibus.
@@ -50,24 +49,23 @@
         </p>
     </div>
     <div class="product_intro_4square_content_div2 row aln-center d-flex align-items-center">
-        <div class="product_intro_squaredivs1 m-1 col"><button class="btn squarediv_btn btn-danger">Buy</button></div>
-        <div class="product_intro_squaredivs2 m-1 col"><button class="btn squarediv_btn btn-danger">Buy</button></div>
-        <div class="product_intro_squaredivs3 m-1 col"><button class="btn squarediv_btn btn-danger">Buy</button></div>
-        <div class="product_intro_squaredivs4 m-1 col"><button class="btn squarediv_btn btn-danger">Buy</button></div>
+        <div class="product_intro_squaredivs1 m-1 col"><a href="{{ Route('products.show','1') }}"><button class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
+        <div class="product_intro_squaredivs2 m-1 col"><a href="{{ Route('products.show','1') }}"><button class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
+        <div class="product_intro_squaredivs3 m-1 col"><a href="{{ Route('products.show','1') }}"><button class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
+        <div class="product_intro_squaredivs4 m-1 col"><a href="{{ Route('products.show','1') }}"><button class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
     </div>
 </div>
 
 
-<div class="space_divs"></div>
+<div class="space_divs2"></div>
 
 {{-- Big Double Divs Picture Left side --}}
 {{-- Big Double Divs Picture Left side --}}
 <div class="container-fluid big_double_divs_pic_left d-flex justify-content-center align-items-center row">
     <div class="bddpl_div1 d-flex align-items-center justify-content-center m-1 col-md">
-        Picture
     </div>
     <div class="bddpl_div2 d-flex align-items-center justify-content-center m-1 col-md">
-        <p class="text-white bddpl_div2_txt text-center">
+        <p class="text-white bddpl_div2_txt text-center text-font">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Porro necessitatibus hic enim nostrum eveniet quis accusantium aliquam velit recusandae provident cum ad eaque officia laboriosam,
             at consectetur, id pariatur assumenda?
@@ -83,26 +81,26 @@
 <div class="container-fluid big_double_divs_pic_right d-flex justify-content-center align-items-center row">
     <div class="bddpr_div2 d-flex align-items-center justify-content-center m-1 col-md">
 
-        <p class="bddpr_div2_txt text-center">
+        <p class="bddpr_div2_txt text-center text-font text-white">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Porro necessitatibus hic enim nostrum eveniet quis accusantium aliquam velit recusandae provident cum ad eaque officia laboriosam,
             at consectetur, id pariatur assumenda?
         </p>
     </div>
     <div class="bddpr_div1 d-flex align-items-center justify-content-center m-1 col-md">
-        Picture
+
     </div>
 </div>
 
 
-<div class="space_divs"></div>
+<div class="space_divs2"></div>
 
 {{-- Review Section Front Page --}}
 {{-- Review Section Front Page --}}
-<div class="container-fluid review_section_frontpage_div d-flex justify-content-center align-items-center row">
+<div class="container-fluid review_section_frontpage_div d-flex justify-content-center align-items-center row shadow-mau">
     <div class="rsf_div1 d-flex align-items-center justify-content-center col-md-6 col-xs-12">
 
-        <p class="text-white rsf_div1_txt text-center">
+        <p class="text-white rsf_div1_txt text-center text-font">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Et debitis iste est quis itaque quod fugit, rerum voluptatem maxime voluptates!
             Dolorum veritatis saepe nihil quam blanditiis sit, quod sunt soluta?
@@ -112,7 +110,7 @@
     </div>
 
     <div class="rsf_div2 d-flex row aln-center d-flex align-items-center col-md-6 col-xs-12">
-        <div class="rsf_div2_box1 col-5 mx-auto text-center col-xs-12">
+        <div class="rsf_div2_box1 col-5 mx-auto text-center col-xs-12 text-font">
             <h2>*****</h2>
             <p>______________________________________</p>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -121,7 +119,7 @@
                 quae quia nesciunt nihil adipisci dignissimos doloremque
                 blanditiis voluptatibus.</p>
         </div>
-        <div class="rsf_div2_box2 col-5 mx-auto text-center col-xs-12">
+        <div class="rsf_div2_box2 col-5 mx-auto text-center col-xs-12 text-font">
             <h2>*****</h2>
             <p>______________________________________</p>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -130,7 +128,7 @@
                 quae quia nesciunt nihil adipisci dignissimos doloremque
                 blanditiis voluptatibus.</p>
         </div>
-        <div class="rsf_div2_box3 col-5 mx-auto text-center col-xs-12">
+        <div class="rsf_div2_box3 col-5 mx-auto text-center col-xs-12 text-font">
             <h2>*****</h2>
             <p>______________________________________</p>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -139,7 +137,7 @@
                 quae quia nesciunt nihil adipisci dignissimos doloremque
                 blanditiis voluptatibus.</p>
         </div>
-        <div class="rsf_div2_box4 col-5 mx-auto text-center col-xs-12">
+        <div class="rsf_div2_box4 col-5 mx-auto text-center col-xs-12 text-font">
             <h2>*****</h2>
             <p>______________________________________</p>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.

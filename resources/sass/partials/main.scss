@@ -5,3 +5,42 @@ body {
     overflow-x: hidden;
     background-color: black;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Cardo&family=Oswald&display=swap');
+
+//Fonts
+$title-font: 'Oswald', sans-serif;
+$text-font: 'Cardo', serif;
+
+.title-font{
+    font-family: $title-font;
+}
+.text-font{
+    font-family: $text-font;
+}
+
+//DropShadow
+.shadow-mau{
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
+}
+
+
+//Buttons
+.btn-mau{
+    font-family: $text-font;
+    font-size: 1.5rem;
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(4px);
+    border: 1px white solid;
+    border-radius: 0.5rem;
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    transition: 0.2s ease-in-out;
+}
+.btn-mau:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    border: 1px rgb(226, 192, 164);
+    color: rgb(226, 192, 164);
+}

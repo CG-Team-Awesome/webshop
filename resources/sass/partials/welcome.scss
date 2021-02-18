@@ -5,9 +5,12 @@
     height: 100vh;
 }
 
-
 .space_divs {
     height: 8vh;
+}
+.space_divs2 {
+    height: 8vh;
+    background-color: #401d1a;
 }
 
 
@@ -17,7 +20,7 @@
 /* Product intro with 4 Square images */
 .product_intro_4square_div{
     height: 100vh;
-    background-color: blue;
+    background-image: linear-gradient(#000 20px, #401d1a 500px);
     display: inline-block;
     overflow: auto;
 }
@@ -41,29 +44,49 @@
     height: 20rem;
     width: 23rem;
     min-width: 20rem;
-    background-color: burlywood;
+    background-image: url('~/images/landing_page_images/example_belt_01.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: black;
     position: relative;
+    border-radius: 5px;
 }
 .product_intro_squaredivs2{
     height: 20rem;
     width: 23rem;
     min-width: 20rem;
-    background-color: burlywood;
+    background-image: url('~/images/landing_page_images/example_watch_01.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: black;
     position: relative;
+    border-radius: 5px;
 }
 .product_intro_squaredivs3{
     height: 20rem;
     width: 23rem;
     min-width: 20rem;;
-    background-color: burlywood;
+    background-image: url('~/images/landing_page_images/example_watch_02.jpeg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: black;
     position: relative;
+    border-radius: 5px;
 }
 .product_intro_squaredivs4{
     height: 20rem;
     width: 23rem;
     min-width: 20rem;
-    background-color: burlywood;
+    background-image: url('~/images/landing_page_images/example_belt_02.webp');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: black;
     position: relative;
+    border-radius: 5px;
 }
 
 .product_intro_text{
@@ -83,43 +106,59 @@
 /* Big Double Divs Pic Left */
 .big_double_divs_pic_left{
     height: 100vh;
-    background-color: green;
+    background-image: linear-gradient(#401d1a 200px, #000 900px);
     margin: 0%;
 }
 
 .bddpl_div1{
     height: 90%;
     background-color: grey;
+    background-image: url('~/images/landing_page_images/skill_01.jpeg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: black;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
 }
 
 .bddpl_div2{
     height: 90%;
-    background-color: darkgrey;
 }
 
 .bddpl_div2_txt{
     max-width: 15rem;
+    font-size: 1.3rem;
 }
 
 /* Big Double Divs Pic Right */
 /* Big Double Divs Pic Right */
 .big_double_divs_pic_right{
     height: 100%;
-    background-color: darkolivegreen;
+    background-image: linear-gradient(#000 20px, #401d1a 500px);
     margin: 0%;
 }
 
 .bddpr_div1{
     height: 90%;
-    background-color: bisque;
+    background-color: grey;
+    background-image: url('~/images/landing_page_images/vintage_workshop.webp');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: black;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
 }
 
 .bddpr_div2{
     height: 90%;
-    background-color: blanchedalmond;
 }
 
 .bddpr_div2_txt{
+    font-size: 1.3rem;
     max-width: 15rem;
 }
 
@@ -127,17 +166,17 @@
 /* Review Section Front Page */
 .review_section_frontpage_div{
     height: 100vh;
-    background-color: royalblue;
+    background-image: linear-gradient(#401d1a 200px, #000 1400px);
     margin: 0%;
 }
 .rsf_div1{
     height: 90%;
     min-width: 50%;
-    background-color: salmon;
+    background-color: #8C564A;
 }
 .rsf_div2{
     height: 90%;
-    background-color: slategrey;
+    background-color: #8C564A;
 }
 .rsf_div1_txt{
     max-width: 15rem;
@@ -207,40 +246,58 @@
     .big_double_divs_pic_left{
         height: fit-content;
         width: auto;
+        margin: 0%;
+        padding: 0%;
     }
 
     .bddpl_div1{
-        height: 100%;
-        background-color: red;
-        margin-left: 1em;
-        width: 100%;
+        display: none;
+        background-image: none;
+        box-shadow: none;
     }
 
     .bddpl_div2{
         height: 100%;
-        background-color: red;
+        background-color: black;
         margin: 0;
         width: 100%;
+        background-image: url('~/images/landing_page_images/skill_01.jpeg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-color: black;
+        position: relative;
+        padding: 5rem;
+        margin: 0%;
+    }
+    .bddpl_div2_txt{
+       //
     }
     /* BIG DOUBLE PIC RIGHT MOBILE*/
     /* BIG DOUBLE PIC RIGHT MOBILE*/
     .big_double_divs_pic_right{
         height: fit-content;
         width: auto;
-        margin: 0%;
+        margin-top: 1rem;
+        padding: 0%;
     }
 
     .bddpr_div1{
-        height: 100%;
-        background-color: red;
-        width: 100%;
+        display: none;
+        background-image: none;
+        box-shadow: none;
     }
 
     .bddpr_div2{
         height: 100%;
-        background-color: red;
-        margin: 0;
-        width: 100%;
+        padding: 5rem;
+        margin: 0%;
+        background-image: url('~/images/landing_page_images/vintage_workshop.webp');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-color: black;
+        position: relative;
     }
 
 
@@ -311,6 +368,9 @@
     /* OTHER OTHER OTHER MOBILE*/
     /* OTHER OTHER OTHER MOBILE*/
     .space_divs{
+        display: none;
+    }
+    .space_divs2 {
         display: none;
     }
 

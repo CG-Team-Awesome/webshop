@@ -17,7 +17,7 @@ class ProductController extends Controller
     {
         $products = Product::all();
 
-        return view('welcome', ['products' => $products]); // TODO change view to product.index (NO-EXIST)
+        return view('product.index', ['products' => $products]);
     }
 
     /**
@@ -53,7 +53,7 @@ class ProductController extends Controller
     {
         $product = Product::where('id', $id)->first();
 
-        return view('product.show', ['product' => $product]); 
+        return view('product.show', ['product' => $product]);
     }
 
     /**
