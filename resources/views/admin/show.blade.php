@@ -7,7 +7,7 @@
     <div class="adm_ps_div1 d-flex justify-content-center align-items-center row">
         {{-- LEFT HALF ADMIN SHOW PAGE --}}
         {{-- LEFT HALF ADMIN SHOW PAGE --}}
-        <form class="col-6">
+        <form class="col-6 lefthalf_asp">
             <div class="form-group">
               <label for="product_title">Product Title</label>
               <input type="text" class="form-control" id="product_title" placeholder="RMX Black Leather M">
@@ -43,7 +43,8 @@
             <button class="btn btn-danger btn-adm-rv">X</button>
            <button class="btn btn-success btn-adm-rv-confirm">Confirm</button>
        </div>
-
     <div>
+        <button class="btn btn-success btn-adm-rv-confirm2">Confirm</button>
+        <a href="/admin/productlist"><button class="btn btn-warning btn-adm-cancelpd2">Cancel</button></a>
 </div>
 @endsection

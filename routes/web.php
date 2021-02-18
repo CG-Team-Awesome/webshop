@@ -31,12 +31,7 @@ Route::resource('categorie', CategoryController::class);
 Route::resource('leverancier', SupplierController::class);
 
 //authentication stuff
-require __DIR__.'/auth.php';
-
-
-
-
-
+require __DIR__ . '/auth.php';
 
 //breeze default log-in destination
 Route::view('/dashboard', 'dashboard')

@@ -31,7 +31,7 @@
 <div class="container-fluid start_screen_div d-flex justify-content-center align-items-center">
 
     <p>
-        <button class="btn btn-warning">HELLO</button>
+        <a href="/allproducts"><button class="btn btn-warning btn-hello">All Products</button></a>
     </p>
 </div>
 

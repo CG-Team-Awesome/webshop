@@ -33,15 +33,30 @@ class RegisteredUserController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
+            'first_name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|confirmed|min:8',
+            'address' => 'required|string|max:255',
+            'postal_code' => 'required|string|max:255', // TODO: Dit moet eigenlijk format-required worden, liefst client- en serverside
+            'city' => 'required|string|max:255',
+            'phone_number' => 'required|string|max:255', // TODO: Dit moet eigenlijk format-required worden, liefst client- en serverside
+            'company_name' => 'required|string|max:255',
+
+            // TODO: Land is nog niet toegevoegd want we willen eerst alleen Nederland.
         ]);
 
-        Auth::login($user = User::create([
-            'name' => $request->name,
+        Auth::login($user = User::create(
+            [
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'address' => $request->address,
+            'postal_code' => $request->postal_code,
+            'city' => $request->city,
+            'phone_number' => $request->phone_number,
+            'company_name' => $request->company
         ]));
 
         event(new Registered($user));
