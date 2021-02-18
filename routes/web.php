@@ -66,3 +66,9 @@ Route::get('/admin/add', function () {
 Route::get('/admin/show', function () {
     return view('/admin/show');
 });
+
+
+
+
+
+
