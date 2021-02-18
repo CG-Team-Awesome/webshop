@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\{ProductController, CategoryController, SupplierController};
 
 /*
 |--------------------------------------------------------------------------
@@ -14,63 +15,40 @@ use Illuminate\Support\Facades\Route;
 */
 
 // HOME
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'welcome');  // TODO rename naar home?
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// PRODUCTEN
+Route::get('product', [ProductController::class, 'index'])->name('products.index');
+Route::get('product/nieuw', [ProductController::class, 'create'])->name('products.create');
+Route::post('product', [ProductController::class, 'store'])->name('products.store');
+Route::get('product/{id}', [ProductController::class, 'show'])->name('products.show');
+Route::get('product/{id}/bewerk', [ProductController::class, 'edit'])->name('products.edit');
+Route::put('product/{id}',[ProductController::class, 'update'])->name('products.update');
+Route::delete('product/{id}', [ProductController::class, 'delete'])->name('products.delete');
+
+// Categorieën en Leveranciers
+Route::resource('categorie', CategoryController::class);
+Route::resource('leverancier', SupplierController::class);
 
 //authentication stuff
 require __DIR__ . '/auth.php';
 
+//breeze default log-in destination
+Route::view('/dashboard', 'dashboard')
+        ->middleware(['auth'])->name('dashboard');
 
-// CART pages
-Route::get('/buy', function () {
-    return view('/product/buy');
-});
-Route::get('/buy2', function () {
-    return view('/product/buy2');
-});
-Route::get('/congrats', function () {
-    return view('/product/congrats');
-});
+// CART views
+Route::view('/buy', '/product/buy');
+Route::view('/buy2', '/product/buy2');
+Route::view('/congrats', '/product/congrats');
 
-// PRODUCT PAGES
-Route::get('show', function () {
-    return view('/product/show');
-});
-Route::get('allproducts', function () {
-    return view('/product/all');
-});
-// USER PAGES
-Route::get('/edit', function () {
-    return view('/user/edit');
-});
-Route::get('/profile', function () {
-    return view('/user/profile');
-});
+// USER views
+Route::view('/edit', '/user/edit');
+Route::view('/profile', '/user/profile');
 
-// ADMIN PAGES
-Route::get('/admin/', function () {
-    return view('/admin/login');
-});
-Route::get('/admin/login', function () {
-    return view('/admin/login');
-});
-Route::get('/admin/productlist', function () {
-    return view('/admin/productlist');
-});
-Route::get('/admin/add', function () {
-    return view('/admin/add');
-});
-Route::get('/admin/show', function () {
-    return view('/admin/show');
-});
-
-
-
-
-
-
+// ADMIN views
+Route::view('/admin/', '/admin/login');
+Route::view('/admin/login', '/admin/login');
+Route::view('/admin/productlist', '/admin/productlist');
+Route::view('/admin/add', '/admin/add');
+Route::view('/admin/show', '/admin/show');

@@ -15,12 +15,12 @@ class CreateSuppliersTable extends Migration
     {
         Schema::create('suppliers', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('name');
             $table->string('address');
             $table->string('city');
-            $table->unsignedBigInteger('postal_code');
+            $table->string('postal_code');
             $table->string('country');
+            $table->timestamps();
             // $table->softdelete();
         });
     }

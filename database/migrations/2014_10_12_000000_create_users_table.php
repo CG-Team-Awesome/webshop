@@ -19,8 +19,6 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->timestamps();
-
             $table->foreignId('role_id')->default('2');
             $table->string('first_name');
             $table->string('last_name')->nullable();
@@ -31,6 +29,7 @@ class CreateUsersTable extends Migration
             $table->string('postal_code')->nullable();
             $table->unsignedBigInteger('phone_number')->nullable();
             $table->boolean('company')->nullable();
+            $table->timestamps();
             // $table->softdelete();
 
             $table->foreign('role_id')

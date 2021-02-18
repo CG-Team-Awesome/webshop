@@ -15,9 +15,9 @@ class CreatePaymentsTable extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('payment_type');
             $table->foreignId('order_id');
+            $table->timestamps();
             // $table->softdelete();
 
             $table->foreign('order_id')

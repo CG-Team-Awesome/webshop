@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\Model;
+use App\Models\TaxGroup;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class TaxGroupFactory extends Factory
@@ -12,7 +12,7 @@ class TaxGroupFactory extends Factory
      *
      * @var string
      */
-    protected $model = Model::class;
+    protected $model = TaxGroup::class;
 
     /**
      * Define the model's default state.

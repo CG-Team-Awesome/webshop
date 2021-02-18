@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
-use App\Http\Requests\ProductRequest;
-use Illuminate\Http\Request;  //TODO kan weg denk ik?
+use App\Models\Supplier;
+use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class SupplierController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +14,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
+        $suppliers = Supplier::all();
 
-        return view('welcome', ['products' => $products]); // TODO change view to product.index (NO-EXIST)
+        return view('supplier.index', ['suppliers' => $suppliers]); // TODO create view
     }
 
     /**
@@ -27,7 +26,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('welcome'); // TODO change view to product.create (NO-EXIST)
+        return view('supplier.create'); // TODO create view
     }
 
     /**
@@ -36,11 +35,11 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ProductRequest $request)
+    public function store(Request $request)
     {
         // TODO store stuff
 
-        return redirect()->route('products.show', ['id' => 1]);  // TODO use real id
+        return redirect()->route('supplier.show', ['id' => 1]);  // TODO use real id
     }
 
     /**
@@ -51,9 +50,9 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        $product = Product::where('id', $id)->first();
+        $supplier = Supplier::where('id', $id)->first();
 
-        return view('product.show', ['product' => $product]); 
+        return view('supplier.show', ['supplier' => $supplier]); // TODO create view
     }
 
     /**
@@ -64,9 +63,9 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        $product = Product::where('id', $id)->first();
+        $supplier = Supplier::where('id', $id)->first();
 
-        return view('product.show', ['product' => $product]); // TODO change view to product-edit (NO-EXIST)
+        return view('supplier.edit', ['supplier' => $supplier]); // TODO create view
     }
 
     /**
@@ -76,9 +75,11 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ProductRequest $request, $id)
+    public function update(Request $request, $id)
     {
-        //
+        // TODO update stuff
+
+        return redirect()->route('supplier.show', ['id' => 1]); // TODO use real id
     }
 
     /**
@@ -89,8 +90,8 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        Product::destroy($id);
+        Supplier::destroy($id);
 
-        return view('welcome'); // TODO change view to product.index (NO-EXIST)
+        return view('supplier.index');
     }
 }
