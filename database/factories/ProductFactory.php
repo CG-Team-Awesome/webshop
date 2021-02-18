@@ -27,19 +27,19 @@ class ProductFactory extends Factory
     {
         return [
         'product_number' => $this->faker->numberBetween($min = 1, $max = 99),
-        'name' => $this->faker->name,
+        'name' => $this->faker->word,
         'tagline' => $this->faker->sentence,
         'description' => $this->faker->paragraph,
         'in_stock' => $this->faker->numberBetween($min = 1, $max = 99),
-        'available_until' => $this->faker->date,
+        'available_until' => $this->faker->dateTimeBetween('-1 year', '+ 3 years'),
         'supplier_id' => Supplier::factory(),
         'price' => $this->faker->numberBetween($min = 1, $max = 99),
-        'picture' => $this->faker->url,
-        'tax_group' => TaxGroup::factory(),
-        'category_id' => Category::factory(),
-        'strap_color' => $this->faker->string(),
-        'watch_tech' => $this->faker->string(),
-        'size' => $this->faker->string()
+        'picture' => $this->faker->imageUrl(200,200,'cats'),
+        'tax_group_id' => TaxGroup::factory(),
+        'category_id' => Category::all()->random()->id,
+        'strap_color' => $this->faker->colorName,
+        'watch_tech' => $this->faker->word,
+        'size' => $this->faker->word,
         ];
     }
 }

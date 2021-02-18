@@ -24,21 +24,21 @@ class CreateProductsTable extends Migration
             $table->foreignId('supplier_id');
             $table->decimal('price', 6,2);
             $table->string('picture');
-            $table->foreignId('tax_group');
+            $table->foreignId('tax_group_id');
             $table->foreignId('category_id');
 	        $table->string('strap_color');
             $table->string('watch_tech');
             $table->string('size');
             $table->timestamps();
-            // $table->softdelete();
+            $table->softDeletes();
 
             $table->foreign('category_id')
                 ->references('id')
                 ->on('categories');
 
-            $table->foreign('tax_group')
+            $table->foreign('tax_group_id')
                 ->references('id')
-                ->on('tax_group');
+                ->on('tax_groups');
 
             $table->foreign('supplier_id')
                 ->references('id')

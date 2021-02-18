@@ -19,8 +19,8 @@ class CreateOrdersTable extends Migration
             $table->UUID('order_number'); //dit misschien nog nader instellen met andere datatype? Moet wel uniek zijn en/of incremental en dan niet beginnen bij 1 maar bij 1000 ofzo.
             $table->date('shipping_date');
             $table->timestamp('billdate');
-            $table->timestamps();
             $table->string('transact_status');
+            $table->timestamps();
             // $table->softdelete();
             });
     }
