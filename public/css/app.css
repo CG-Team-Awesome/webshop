@@ -10289,7 +10289,7 @@ body {
 /* Start Screen Div */
 /* Start Screen Div */
 .start_screen_div {
-  background-color: hotpink;
+  background-image: url(/images/background_main.jpg?dd68caa32540a75160cf5fe28dc164a9);
   height: 100vh;
 }
 
@@ -11303,6 +11303,123 @@ body {
   .btn-showpage2 {
     display: block;
     margin-top: 3rem;
+  }
+}
+.allproducts_main_div {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+}
+
+.btn-allpd_back1 {
+  position: fixed;
+  left: 10%;
+  bottom: 10%;
+  z-index: 3;
+}
+
+.btn-allpd_back2 {
+  display: none;
+}
+
+.ap_watches_div {
+  background-color: #592c22;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 100vh;
+}
+
+.horloge_title {
+  position: absolute;
+  top: 5%;
+  right: 15%;
+}
+
+.horloge_card {
+  width: 15rem;
+  margin: 2rem;
+  background-color: #a6867b;
+  border-radius: 10px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
+}
+
+.ap_belts_div {
+  background-color: #592c22;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 100vh;
+}
+
+.riemen_title {
+  z-index: 2;
+  position: absolute;
+  top: 110%;
+  left: 10%;
+}
+
+.riemen_card {
+  width: 15rem;
+  margin: 2rem;
+  background-color: #a6867b;
+  border-radius: 10px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* MOBILE BREAKPOINTS */
+/* MOBILE BREAKPOINTS */
+/* MOBILE BREAKPOINTS */
+@media screen and (max-width: 1000px) {
+  .btn-allpd_back1 {
+    display: none;
+  }
+
+  .btn-allpd_back2 {
+    margin-top: 1rem;
+    display: block;
+  }
+
+  .ap_watches_div {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .horloge_title {
+    position: relative;
+    left: 0%;
+    top: 0%;
+  }
+
+  .horloge_card {
+    width: 100%;
+    margin: 2rem;
+  }
+
+  .ap_belts_div {
+    border-top: 2px solid black;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .riemen_title {
+    position: relative;
+    left: 0%;
+    top: 0%;
+  }
+
+  .riemen_card {
+    width: 100%;
+    margin: 2rem;
   }
 }
 .adm_pi_main {
