@@ -20,7 +20,13 @@
 /* Product intro with 4 Square images */
 .product_intro_4square_div{
     height: 100vh;
-    background-image: linear-gradient(#000 20px, #401d1a 500px);
+    //background-image: linear-gradient(#000 20px, #401d1a 500px);
+    //background-position: top -200px right;
+    background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('~/images/landing_page_images/hand_with_sand.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     display: inline-block;
     overflow: auto;
 }
@@ -106,7 +112,7 @@
 /* Big Double Divs Pic Left */
 .big_double_divs_pic_left{
     height: 100vh;
-    background-image: linear-gradient(#401d1a 200px, #000 900px);
+    background-image: linear-gradient(167deg,#401d1a 380px, #000 );
     margin: 0%;
 }
 
@@ -136,7 +142,11 @@
 /* Big Double Divs Pic Right */
 .big_double_divs_pic_right{
     height: 100%;
-    background-image: linear-gradient(#000 20px, #401d1a 500px);
+    background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('~/images/landing_page_images/skill_02.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     margin: 0%;
 }
 
@@ -172,14 +182,19 @@
 .rsf_div1{
     height: 90%;
     min-width: 50%;
-    background-color: #8C564A;
+    background-color: #5c2b26;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 .rsf_div2{
     height: 90%;
-    background-color: #8C564A;
+    background-color: #5c2b26;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .rsf_div1_txt{
     max-width: 15rem;
+    font-size: 1.1rem;
 }
 .rsf_div1_btn{
     display: block;
@@ -187,11 +202,12 @@
 }
 
 .rsf_div2_box1, .rsf_div2_box2, .rsf_div2_box3, .rsf_div2_box4{
-    background-color: aquamarine;
+    background-color: #a6865b;
     height: 15rem;
     width: 20rem;
     overflow: hidden;
-
+    border-radius: 10px;
+    padding-top: 0.5rem;
 }
 .rsf_div2_box1 > h2{
     color: gold;
@@ -219,14 +235,14 @@
 .main_page_footer_with_links{
     height: 30vh;
     width: 100%;
-    background-color: indigo;
+    background-color: #000;
     margin: 0%;
 }
 .socialmedia_divs{
     height: 2em;
     width: 2em;
     border-radius: 50%;
-    background-color: khaki;
+    background-color: #a6865b;
 
 }
 
@@ -280,6 +296,7 @@
         width: auto;
         margin-top: 1rem;
         padding: 0%;
+        background-image: linear-gradient(#000 200px, #401d1a 900px);
     }
 
     .bddpr_div1{
@@ -330,19 +347,21 @@
     /* REVIEW SECTION FRONTPAGE MOBILE*/
     .review_section_frontpage_div{
         height: fit-content;
-        width: auto;
+        width: 100%;
         margin: 0%;
-        padding-left: 0%;
+        padding: 0%;
     }
     .rsf_div1{
         margin: 0%;
         padding-top: 2em;
+        padding-left: 1rem;
     }
     .rsf_div1, .rsf_div2{
         height: fit-content;
         width: 100%;
         background-color: rgb(80, 26, 26);
-        margin-left: 1em;
+        padding-left: 1rem;
+        border-radius: 0px;
     }
     .rsf_div1_btn{
         margin-bottom: 1em;

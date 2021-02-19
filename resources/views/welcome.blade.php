@@ -49,10 +49,10 @@
         </p>
     </div>
     <div class="product_intro_4square_content_div2 row aln-center d-flex align-items-center">
-        <div class="product_intro_squaredivs1 m-1 col"><a href="{{ Route('products.show','1') }}"><button class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
-        <div class="product_intro_squaredivs2 m-1 col"><a href="{{ Route('products.show','1') }}"><button class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
-        <div class="product_intro_squaredivs3 m-1 col"><a href="{{ Route('products.show','1') }}"><button class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
-        <div class="product_intro_squaredivs4 m-1 col"><a href="{{ Route('products.show','1') }}"><button class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
+        <div class="product_intro_squaredivs1 shadow-mau m-1 col"><a href="{{ Route('products.show','1') }}"><button class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
+        <div class="product_intro_squaredivs2 shadow-mau m-1 col"><a href="{{ Route('products.show','1') }}"><button class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
+        <div class="product_intro_squaredivs3 shadow-mau m-1 col"><a href="{{ Route('products.show','1') }}"><button class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
+        <div class="product_intro_squaredivs4 shadow-mau m-1 col"><a href="{{ Route('products.show','1') }}"><button class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
     </div>
 </div>
 
@@ -104,13 +104,13 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Et debitis iste est quis itaque quod fugit, rerum voluptatem maxime voluptates!
             Dolorum veritatis saepe nihil quam blanditiis sit, quod sunt soluta?
-            <button class="btn rsf_div1_btn btn-success mx-auto">Button</button>
+            <button class="btn rsf_div1_btn btn-mau mx-auto shadow-mau">Button</button>
         </p>
 
     </div>
 
     <div class="rsf_div2 d-flex row aln-center d-flex align-items-center col-md-6 col-xs-12">
-        <div class="rsf_div2_box1 col-5 mx-auto text-center col-xs-12 text-font">
+        <div class="rsf_div2_box1 col-5 mx-auto text-center col-xs-12 text-font shadow-mau">
             <h2>*****</h2>
             <p>______________________________________</p>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -119,7 +119,7 @@
                 quae quia nesciunt nihil adipisci dignissimos doloremque
                 blanditiis voluptatibus.</p>
         </div>
-        <div class="rsf_div2_box2 col-5 mx-auto text-center col-xs-12 text-font">
+        <div class="rsf_div2_box2 col-5 mx-auto text-center col-xs-12 text-font shadow-mau">
             <h2>*****</h2>
             <p>______________________________________</p>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -128,7 +128,7 @@
                 quae quia nesciunt nihil adipisci dignissimos doloremque
                 blanditiis voluptatibus.</p>
         </div>
-        <div class="rsf_div2_box3 col-5 mx-auto text-center col-xs-12 text-font">
+        <div class="rsf_div2_box3 col-5 mx-auto text-center col-xs-12 text-font shadow-mau">
             <h2>*****</h2>
             <p>______________________________________</p>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -137,7 +137,7 @@
                 quae quia nesciunt nihil adipisci dignissimos doloremque
                 blanditiis voluptatibus.</p>
         </div>
-        <div class="rsf_div2_box4 col-5 mx-auto text-center col-xs-12 text-font">
+        <div class="rsf_div2_box4 col-5 mx-auto text-center col-xs-12 text-font shadow-mau">
             <h2>*****</h2>
             <p>______________________________________</p>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
