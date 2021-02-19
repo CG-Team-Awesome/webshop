@@ -16,7 +16,7 @@ class CategoryController extends Controller
     {
         $categories = Category::all();
 
-        return view('category.index', ['categories' => $categories]); // TODO create view
+        return view('admin.category.index', ['categories' => $categories]);
     }
 
     /**
@@ -26,7 +26,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('category.create'); // TODO create view
+        return view('admin.category.create');
     }
 
     /**
@@ -52,7 +52,7 @@ class CategoryController extends Controller
     {
         $category = Category::where('id', $id)->first();
 
-        return view('category.show', ['category' => $category]); // TODO create view
+        return view('admin.category.show', ['category' => $category]);
     }
 
     /**
@@ -65,7 +65,7 @@ class CategoryController extends Controller
     {
         $category = Category::where('id', $id)->first();
 
-        return view('category.edit', ['category' => $category]); // TODO create view
+        return view('admin.category.edit', ['category' => $category]);
     }
 
     /**
@@ -92,6 +92,6 @@ class CategoryController extends Controller
     {
         Category::destroy($id);
 
-        return view('category.index');
+        return redirect()->route('categorie.index');
     }
 }
