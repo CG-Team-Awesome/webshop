@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
-use App\Http\Requests\ProductRequest;
+use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +13,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
+        // TODO get data for different stuff on homepage.
 
-        return view('admin.product.index', ['products' => $products]);
+        return view('welcome'); // TODO rename view to home.
     }
 
     /**
@@ -26,7 +25,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('admin.product.create');
+        //
     }
 
     /**
@@ -35,11 +34,9 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ProductRequest $request)
+    public function store(Request $request)
     {
-        // TODO |xmh| store stuff
-
-        return redirect()->route('products.show', ['id' => 1]);  // TODO |xmh| use real id
+        //
     }
 
     /**
@@ -50,9 +47,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        $product = Product::where('id', $id)->first();
-
-        return view('product.show', ['product' => $product]);
+        //
     }
 
     /**
@@ -63,9 +58,7 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        $product = Product::where('id', $id)->first();
-
-        return view('admin.product.edit', ['product' => $product]);
+        //
     }
 
     /**
@@ -75,7 +68,7 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ProductRequest $request, $id)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -88,8 +81,6 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        Product::destroy($id);
-
-        return redirect()->route('product.index');
+        //
     }
 }

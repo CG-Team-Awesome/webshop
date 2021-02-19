@@ -16,7 +16,7 @@ class SupplierController extends Controller
     {
         $suppliers = Supplier::all();
 
-        return view('supplier.index', ['suppliers' => $suppliers]); // TODO create view
+        return view('admin.supplier.index', ['suppliers' => $suppliers]);
     }
 
     /**
@@ -26,7 +26,7 @@ class SupplierController extends Controller
      */
     public function create()
     {
-        return view('supplier.create'); // TODO create view
+        return view('admin.supplier.create');
     }
 
     /**
@@ -39,7 +39,7 @@ class SupplierController extends Controller
     {
         // TODO store stuff
 
-        return redirect()->route('supplier.show', ['id' => 1]);  // TODO use real id
+        return redirect()->route('admin.supplier.show', ['id' => 1]);  // TODO use real id
     }
 
     /**
@@ -52,7 +52,7 @@ class SupplierController extends Controller
     {
         $supplier = Supplier::where('id', $id)->first();
 
-        return view('supplier.show', ['supplier' => $supplier]); // TODO create view
+        return view('admin.supplier.show', ['supplier' => $supplier]);
     }
 
     /**
@@ -65,7 +65,7 @@ class SupplierController extends Controller
     {
         $supplier = Supplier::where('id', $id)->first();
 
-        return view('supplier.edit', ['supplier' => $supplier]); // TODO create view
+        return view('admin.supplier.edit', ['supplier' => $supplier]);
     }
 
     /**
@@ -92,6 +92,6 @@ class SupplierController extends Controller
     {
         Supplier::destroy($id);
 
-        return view('supplier.index');
+        return redirect()->route('leverancier.index');
     }
 }

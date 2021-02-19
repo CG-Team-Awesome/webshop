@@ -21,7 +21,7 @@ class CreateSuppliersTable extends Migration
             $table->string('postal_code');
             $table->string('country');
             $table->timestamps();
-            // $table->softdelete();
+            $table->softDeletes();
         });
     }
 
