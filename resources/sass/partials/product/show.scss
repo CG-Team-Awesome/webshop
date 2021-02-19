@@ -12,7 +12,7 @@
 // SHOW PAGE LEFT HALF
 // SHOW PAGE LEFT HALF
 .sp_lefthalf {
-    background: #efdefe;
+    background: #401d1a;
 }
 .btn-showpage1{
     top: 90%;
@@ -24,37 +24,62 @@
 .sp_left_div1{
     width: 60rem;
     height: 40rem;
-    background-color: darkgoldenrod;
+    background-color: #5c2b26;
     margin-left: 10rem;
     margin-right: 5rem;
     position: absolute;
-    left: 0%
+    left: 0%;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
 }
+.sp_left_div1 h1{
+    font-weight: bold;
+    font-size: 2rem;
+}
+.sp_left_div1_img{
+    width: 12rem;
+    height: 10rem;
+    background-color: #a6865b;
+    margin: 1rem;
+    border-radius: 5px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
+}
+
 // PRODUCT INFO DIV
 .sp_left_div2{
     width: 60rem;
     height: 40rem;
-    background-color: darkgrey;
+    background-color: #5c2b26;
     margin-left: 10rem;
     margin-right: 15rem;
     position: absolute;
     left: 30%;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
 }
 // PRODUCT REVIEW DIV
 .sp_left_div3{
     width: 60rem;
     height: 40rem;
-    background-color: darksalmon;
+    background-color: #5c2b26;
     margin-left: 10rem;
     margin-right: 15rem;
     position: absolute;
     left: 60%;
     padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
 }
+.sp_left_div3 h1{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
 .div3_review_div{
     height: 13rem;
-    background-color: darkseagreen;
+    background-color: #a6865b;
     margin-bottom: 2rem;
+    border-radius: 5px;
 }
 .btn-review{
     position: relative;
@@ -74,7 +99,7 @@
 // SHOW PAGE RIGHT HALF
 // SHOW PAGE RIGHT HALF
 .sp_righthalf {
-    background: #a3f3d3;
+    background-image: linear-gradient( 114deg,#401d1a 600px, #000 );
 }
 
 
@@ -157,6 +182,7 @@
     .sp_lefthalf{
         height: fit-content;
         flex-direction: column;
+        padding: 0%;
       }
     // LEFT HALF MOBILE, PRODUCT PICTURE DIV
     .sp_left_div1{
@@ -164,6 +190,7 @@
         left: 0%;
         position: relative;
         width: 110%;
+        border-radius: 0px;
     }
     // LEFT HALF MOBILE, PRODUCT INFO DIV
     .sp_left_div2{
@@ -171,6 +198,7 @@
         margin: 0%;
         position: relative;
         width: 110%;
+        border-radius: 0px;
     }
     // LEFT HALF MOBILE, REVIEW INFO DIV
     .sp_left_div3{
@@ -180,6 +208,7 @@
         width: 110%;
         height: fit-content;
         padding-bottom: 1rem;
+        border-radius: 0px;
     }
     .btn-review{
         margin-bottom: 5rem;

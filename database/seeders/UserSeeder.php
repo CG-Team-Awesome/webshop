@@ -29,14 +29,14 @@ class UserSeeder extends Seeder
                 'country' => 'netherlands',
                 'postal_code' => '1234AB',
                 'phone_number' => '0612345678',
-                
+
             ],
             [
                 'id' => 2,
                 'first_name' => 'Maurice',
                 'last_name' => 'DT',
-                'email' => 'maurice@maurice.maurice',
-                'password' => Hash::make('password'),
+                'email' => 'maurice@test.nl',
+                'password' => Hash::make('test'),
                 'role_id' => '1',
                 'address' => 'straatnaam 1',
                 'city' => 'groningen',

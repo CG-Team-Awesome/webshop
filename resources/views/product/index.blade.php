@@ -15,7 +15,7 @@
 
         {{-- CONTENT OF SECTION HORLOGES --}}
         {{-- CONTENT OF SECTION HORLOGES --}}
-        <a href="/show">
+        <a href="{{ Route('products.show','1') }}">
             <div class="card horloge_card text-center">
                 <img class="card-img-top" src="/images/vincero_brown_gold.webp" alt="Card image cap">
                 <div class="card-body">
@@ -26,7 +26,7 @@
             </div>
         </a>
 
-        <a href="/show">
+        <a href="{{ Route('products.show','1') }}">
             <div class="card horloge_card text-center">
                 <img class="card-img-top" src="/images/vincero_brown_gold.webp" alt="Card image cap">
                 <div class="card-body">
@@ -37,7 +37,7 @@
             </div>
         </a>
 
-        <a href="/show">
+        <a href="{{ Route('products.show','1') }}">
             <div class="card horloge_card text-center">
                 <img class="card-img-top" src="/images/vincero_brown_gold.webp" alt="Card image cap">
                 <div class="card-body">
@@ -48,7 +48,7 @@
             </div>
         </a>
 
-        <a href="/show">
+        <a href="{{ Route('products.show','1') }}">
             <div class="card horloge_card text-center">
                 <img class="card-img-top" src="/images/vincero_brown_gold.webp" alt="Card image cap">
                 <div class="card-body">
@@ -76,7 +76,7 @@
 
         {{-- SECTION OF SECTION RIEMEN --}}
         {{-- SECTION OF SECTION RIEMEN --}}
-        <a href="/show">
+        <a href="{{ Route('products.show','1') }}">
             <div class="card riemen_card text-center">
                 <img class="card-img-top" src="/images/belt_darkbrown.jpg" alt="Card image cap">
                 <div class="card-body">
@@ -87,7 +87,7 @@
             </div>
         </a>
 
-        <a href="/show">
+        <a href="{{ Route('products.show','1') }}">
             <div class="card riemen_card text-center">
                 <img class="card-img-top" src="/images/belt_darkbrown.jpg" alt="Card image cap">
                 <div class="card-body">
@@ -98,7 +98,7 @@
             </div>
         </a>
 
-        <a href="/show">
+        <a href="{{ Route('products.show','1') }}">
             <div class="card riemen_card text-center">
                 <img class="card-img-top" src="/images/belt_darkbrown.jpg" alt="Card image cap">
                 <div class="card-body">
@@ -109,7 +109,7 @@
             </div>
         </a>
 
-        <a href="/show">
+        <a href="{{ Route('products.show','1') }}">
             <div class="card riemen_card text-center">
                 <img class="card-img-top" src="/images/belt_darkbrown.jpg" alt="Card image cap">
                 <div class="card-body">
