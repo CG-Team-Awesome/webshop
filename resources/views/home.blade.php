@@ -30,7 +30,7 @@
 
 <div class="container-fluid start_screen_div d-flex justify-content-center align-items-center">
 
-    <a href="{{ Route('products.index') }}"><button class="btn btn-mau shadow-mau">Browse</button></a>
+    <a href="{{ Route('product.index') }}"><button class="btn btn-mau shadow-mau">Browse</button></a>
 
 </div>
 
@@ -49,10 +49,10 @@
         </p>
     </div>
     <div class="product_intro_4square_content_div2 row aln-center d-flex align-items-center">
-        <div class="product_intro_squaredivs1 shadow-mau m-1 col"><a href="{{ Route('products.show','1') }}"><button class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
-        <div class="product_intro_squaredivs2 shadow-mau m-1 col"><a href="{{ Route('products.show','1') }}"><button class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
-        <div class="product_intro_squaredivs3 shadow-mau m-1 col"><a href="{{ Route('products.show','1') }}"><button class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
-        <div class="product_intro_squaredivs4 shadow-mau m-1 col"><a href="{{ Route('products.show','1') }}"><button class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
+        <div class="product_intro_squaredivs1 shadow-mau m-1 col"><a href="{{ Route('product.show','1') }}"><button class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
+        <div class="product_intro_squaredivs2 shadow-mau m-1 col"><a href="{{ Route('product.show','1') }}"><button class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
+        <div class="product_intro_squaredivs3 shadow-mau m-1 col"><a href="{{ Route('product.show','1') }}"><button class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
+        <div class="product_intro_squaredivs4 shadow-mau m-1 col"><a href="{{ Route('product.show','1') }}"><button class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
     </div>
 </div>
 
