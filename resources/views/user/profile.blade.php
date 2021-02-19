@@ -12,7 +12,7 @@
                     <div class="ppl_top_image_placeholder">PICTURE</div>
                     <div class="text-center">
                         <ul class="text-white">
-                            <li class="text-white">Name</li>
+                            <li class="text-white">Name: {{  }}</li>
                             <li class="text-white">Age</li>
                             <li class="text-white">Address</li>
                             <li class="text-white">City</li>

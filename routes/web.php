@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{ProductController, CategoryController, SupplierController};
+use App\Http\Controllers\{ProductController, CategoryController, SupplierController, UserController};
 
 /*
 |--------------------------------------------------------------------------
@@ -44,10 +44,11 @@ Route::view('/congrats', '/product/congrats');
 
 // USER views
 Route::view('/edit', '/user/edit');
-Route::view('/profile', '/user/profile');
+Route::get('profile', [UserController::class, 'index'])->name('profile.index');
+// Route::view('/profile', '/user/profile');
 
 // ADMIN views
-Route::view('/admin/', '/admin/login');
+Route::view('/admin', '/admin/login');
 Route::view('/admin/login', '/admin/login');
 Route::view('/admin/productlist', '/admin/productlist');
 Route::view('/admin/add', '/admin/add');

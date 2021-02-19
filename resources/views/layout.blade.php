@@ -19,6 +19,7 @@
     </head>
 
     <body>
+        @extends('partials/mainnavbar')
         @yield('content')
     </body>
 
