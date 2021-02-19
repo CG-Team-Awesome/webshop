@@ -15,23 +15,20 @@ use App\Http\Controllers\{ProductController, CategoryController, SupplierControl
 */
 
 // HOME
-Route::view('/', 'welcome');  // TODO rename naar home?
+Route::get ('/', [HomeController::class, 'index'])->name('home');
 
-// PRODUCTEN
-Route::get('product', [ProductController::class, 'index'])->name('products.index');
-Route::get('product/nieuw', [ProductController::class, 'create'])->name('products.create');
-Route::post('product', [ProductController::class, 'store'])->name('products.store');
-Route::get('product/{id}', [ProductController::class, 'show'])->name('products.show');
-Route::get('product/{id}/bewerk', [ProductController::class, 'edit'])->name('products.edit');
-Route::put('product/{id}',[ProductController::class, 'update'])->name('products.update');
-Route::delete('product/{id}', [ProductController::class, 'delete'])->name('products.delete');
+Route::get('product', [HomeController::class, 'index'])->name('product.index');
+Route::get('product/{id}', [HomeController::class, 'show'])->name('product.show');
 
-// Categorieën en Leveranciers
-Route::resource('categorie', CategoryController::class);
-Route::resource('leverancier', SupplierController::class);
+
+// Admin: Products, Categories and Suppliers
+Route::resource('admin/product', ProductController::class);
+Route::resource('admin/category', CategoryController::class);
+Route::resource('admin/supplier', SupplierController::class);
 
 //authentication stuff
 require __DIR__ . '/auth.php';
+
 
 //breeze default log-in destination
 Route::view('/dashboard', 'dashboard')

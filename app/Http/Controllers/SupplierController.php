@@ -92,6 +92,6 @@ class SupplierController extends Controller
     {
         Supplier::destroy($id);
 
-        return redirect()->route('leverancier.index');
+        return redirect()->route('supplier.index');
     }
 }
