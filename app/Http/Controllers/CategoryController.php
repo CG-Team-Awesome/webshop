@@ -92,6 +92,6 @@ class CategoryController extends Controller
     {
         Category::destroy($id);
 
-        return redirect()->route('categorie.index');
+        return redirect()->route('category.index');
     }
 }

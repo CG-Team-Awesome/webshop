@@ -15,7 +15,7 @@ class HomeController extends Controller
     {
         // TODO get data for different stuff on homepage.
 
-        return view('welcome'); // TODO rename view to home.
+        return view('home'); // TODO rename view to home.
     }
 
     /**
