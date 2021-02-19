@@ -5,32 +5,15 @@
 
 {{-- Login and register --}}
 
-<div class="container-fluid fixed-top p-4">
-    <div class="col-12">
-        <div class="d-flex justify-content-end">
-            @if (Route::has('login'))
-            <div class="">
-                @auth
-                <a href="{{ url('/dashboard') }}">Dashboard</a>
-                @else
-                <a href="{{ route('login') }}">Login</a>
 
-                @if (Route::has('register'))
-                <a href="{{ route('register') }}" class="ml-4">Register</a>
-                @endif
-                @endif
-            </div>
-            @endif
-        </div>
-    </div>
-</div>
 
 {{-- Start screen div with Button in the middle --}}
 {{-- Start screen div with Button in the middle --}}
 
-<div class="container-fluid start_screen_div d-flex justify-content-center align-items-center">
+<div class="container-fluid start_screen_div d-flex justify-content-center align-items-center row">
 
     <a href="{{ Route('product.index') }}"><button class="btn btn-mau shadow-mau">Browse</button></a>
+    <h1 class="title-font text-white text-center m-2">MAXIRU</h1>
 
 </div>
 

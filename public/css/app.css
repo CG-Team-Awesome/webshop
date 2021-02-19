@@ -10315,7 +10315,7 @@ body {
 
 .btn-mau:hover {
   cursor: pointer;
-  transform: scale(1.05);
+  transform: scale(1.08);
   border: 1px #401d1a;
   color: #401d1a;
   background-color: white;
@@ -10330,6 +10330,10 @@ a:hover, a:visited, a:link, a:active {
 .start_screen_div {
   background-image: url(/images/maxiruheader.jpg?765ca651b2bcabf3ebda98f719704d61);
   height: 100vh;
+}
+
+.start_screen_div h1 {
+  font-size: 12rem;
 }
 
 .space_divs {
@@ -11292,13 +11296,19 @@ a:hover, a:visited, a:link, a:active {
   font-size: 2rem;
 }
 
-.sp_left_div1_img {
+.sp_left_div1_container {
   width: 12rem;
   height: 10rem;
   background-color: #a6865b;
   margin: 1rem;
   border-radius: 5px;
   box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
+}
+
+.sp_left_div1_img {
+  width: 11rem;
+  height: 9rem;
+  border-radius: 5px;
 }
 
 .sp_left_div2 {

@@ -14,17 +14,17 @@
             {{-- PRODUCT PICTURE DIV --}}
                 <div class="sp_left_div1 d-flex justify-content-center align-items-center row">
                     <h1 class="text-center text-white col-12 title-font"> Pictures </h1>
-                    <div class="sp_left_div1_img">
-                        <img src="/public/images/show_page_images/example_riem_01.png" alt="example_belt_01">
+                    <div class="sp_left_div1_container d-flex justify-content-center align-items-center">
+                        <img class="sp_left_div1_img" src="/images/show_page_images/example_riem_01.png" alt="example_belt_01">
                     </div>
-                    <div class="sp_left_div1_img">
-                        <img src="" alt="example_belt_01">
+                    <div class="sp_left_div1_container d-flex justify-content-center align-items-center">
+                        <img class="sp_left_div1_img" src="/images/show_page_images/example_riem_02.png" alt="example_belt_02">
                     </div>
-                    <div class="sp_left_div1_img">
-                        <img src="" alt="example_belt_01">
+                    <div class="sp_left_div1_container d-flex justify-content-center align-items-center">
+                        <img class="sp_left_div1_img" src="/images/show_page_images/example_riem_03.png" alt="example_belt_03">
                     </div>
-                    <div class="sp_left_div1_img">
-                        <img src="" alt="example_belt_01">
+                    <div class="sp_left_div1_container d-flex justify-content-center align-items-center">
+                        <img class="sp_left_div1_img" src="/images/show_page_images/example_riem_04.png" alt="example_belt_04">
                     </div>
                 </div>
 

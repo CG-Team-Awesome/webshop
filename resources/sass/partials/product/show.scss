@@ -36,13 +36,18 @@
     font-weight: bold;
     font-size: 2rem;
 }
-.sp_left_div1_img{
+.sp_left_div1_container{
     width: 12rem;
     height: 10rem;
     background-color: #a6865b;
     margin: 1rem;
     border-radius: 5px;
     box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
+}
+.sp_left_div1_img{
+    width: 11rem;
+    height: 9rem;
+    border-radius: 5px;
 }
 
 // PRODUCT INFO DIV
