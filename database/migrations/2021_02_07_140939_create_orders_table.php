@@ -20,6 +20,7 @@ class CreateOrdersTable extends Migration
             $table->date('shipping_date');
             $table->timestamp('billdate');
             $table->string('transact_status');
+            $table->string('order_status');
             $table->timestamps();
             // $table->softdelete();
             });
