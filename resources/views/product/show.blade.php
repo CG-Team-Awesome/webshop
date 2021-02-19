@@ -9,11 +9,23 @@
         {{-- SHOW PAGE LEFT HALF --}}
     <div class="sp_slide sp_lefthalf d-flex justify-content-center align-items-center">
 
-            <a href="/"><button class="btn btn-primary btn-showpage1">Back</button></a>
+            <a href="/"><button class="btn btn-mau shadow-mau btn-showpage1">Back</button></a>
             {{-- PRODUCT PICTURE DIV --}}
             {{-- PRODUCT PICTURE DIV --}}
-                <div class="sp_left_div1 d-flex justify-content-center align-items-center">
-                    <p class="text-center text-white"> Pictures </p>
+                <div class="sp_left_div1 d-flex justify-content-center align-items-center row">
+                    <h1 class="text-center text-white col-12 title-font"> Pictures </h1>
+                    <div class="sp_left_div1_img">
+                        <img src="/public/images/show_page_images/example_riem_01.png" alt="example_belt_01">
+                    </div>
+                    <div class="sp_left_div1_img">
+                        <img src="" alt="example_belt_01">
+                    </div>
+                    <div class="sp_left_div1_img">
+                        <img src="" alt="example_belt_01">
+                    </div>
+                    <div class="sp_left_div1_img">
+                        <img src="" alt="example_belt_01">
+                    </div>
                 </div>
 
             {{-- PRODUCT INFO DIV --}}
@@ -25,11 +37,11 @@
             {{-- PRODUCT REVIEW DIV --}}
             {{-- PRODUCT REVIEW DIV --}}
                 <div class="sp_left_div3 d-flex justify-content-center align-items-center row">
-                    <h1 class="text-white text-center col-12 mb-4"> Reviews </h1>
-                    <div class="div3_review_div col-12"></div>
-                    <div class="div3_review_div col-12"></div>
-                    <button class="btn btn-success btn-review">+</button>
-                    <a href="/"><button class="btn btn-primary btn-showpage2">Back</button></a>
+                    <h1 class="text-white text-center col-12 mb-4 title-font"> Reviews </h1>
+                    <div class="div3_review_div col-12 shadow-mau"></div>
+                    <div class="div3_review_div col-12 shadow-mau"></div>
+                    <button class="btn btn-success btn-review shadow-mau">+</button>
+                    <a href="/"><button class="btn btn-mau shadow-mau btn-showpage2">Back</button></a>
                 </div>
     </div>
 
