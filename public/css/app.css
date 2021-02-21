@@ -10315,7 +10315,7 @@ body {
 
 .btn-mau:hover {
   cursor: pointer;
-  transform: scale(1.08);
+  transform: scale(1.12);
   border: 1px #401d1a;
   color: #401d1a;
   background-color: white;
@@ -10325,15 +10325,133 @@ a:hover, a:visited, a:link, a:active {
   text-decoration: none;
 }
 
+#mainNavbar {
+  padding: 0.3rem;
+  height: 5rem;
+}
+
+#mainNavbar a {
+  height: 3rem;
+  font-size: 1.2rem;
+  color: #401d1a;
+  transition: 0.2s;
+}
+
+.scrolled {
+  background-color: white !important;
+  transition: background-color 500ms ease-in-out;
+}
+
+/* NEW SECTION TOP */
+/* NEW SECTION TOP */
+.new_home_top_div {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/images/maxiru_new_top.webp?5d201565723fcd9b569527c6f8c20576);
+  margin: 0%;
+  padding: 0%;
+}
+
+.new_home_top_div h1 {
+  font-size: 12rem;
+  -webkit-animation-name: fadeInLogoText001;
+          animation-name: fadeInLogoText001;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  opacity: 0%;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeInLogoText001 {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -30%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLogoText001 {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -30%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.new_home_top_div h2 {
+  position: absolute;
+  top: 80%;
+  left: 80%;
+  color: #401d1a;
+  -webkit-animation-name: fadeInLogoText002;
+          animation-name: fadeInLogoText002;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  opacity: 0%;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeInLogoText002 {
+  0% {
+    opacity: 0;
+    transform: translate3d(-30%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLogoText002 {
+  0% {
+    opacity: 0;
+    transform: translate3d(-30%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
 /* Start Screen Div */
 /* Start Screen Div */
 .start_screen_div {
-  background-image: url(/images/maxiruheader.jpg?765ca651b2bcabf3ebda98f719704d61);
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/images/maxiruheader.jpg?765ca651b2bcabf3ebda98f719704d61);
   height: 100vh;
+  margin: 0%;
+  padding: 0%;
 }
 
-.start_screen_div h1 {
-  font-size: 12rem;
+.start_screen_div p {
+  font-size: 6rem;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translate3d(0, -30%, 0);
+  transition: opacity 500ms ease-in, transform 500ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.spring-color {
+  color: #cceccc;
+}
+
+.btn-browse {
+  position: relative;
+  margin: 0%;
+  top: 20%;
 }
 
 .space_divs {
@@ -10585,6 +10703,18 @@ a:hover, a:visited, a:link, a:active {
 /* MOBILE BREAKPOINTS */
 /* MOBILE BREAKPOINTS */
 @media screen and (max-width: 1000px) {
+  /* NEW TOP DIV MOBILE */
+  /* NEW TOP DIV MOBILE */
+  .new_home_top_div h1 {
+    font-size: 8rem;
+  }
+
+  /* OLD TOP DIV MOBILE */
+  /* OLD TOP DIV MOBILE */
+  .start_screen_div p {
+    font-size: 4rem;
+  }
+
   /* BIG DOUBLE PIC LEFT MOBILE*/
   /* BIG DOUBLE PIC LEFT MOBILE*/
   .big_double_divs_pic_left {
