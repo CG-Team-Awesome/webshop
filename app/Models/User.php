@@ -23,6 +23,10 @@ class User extends Authenticatable
         'password',
         'address',
         'postal_code', // TODO: Nullable uit de DB migrations halen bij de vereiste velden en toevoegen hier bij fillable
+        'city',
+        'phone_number',
+        'website',
+        'company_name',
     ];
 
     /**
