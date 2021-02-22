@@ -28,8 +28,15 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('supplier', SupplierController::class);
 });
 
+// User routes
+Route::get('profile/edit', [UserController::class, 'show'])->name('profile.edit')
+        ->middleware(['auth']);
+Route::get('profile', [UserController::class, 'index'])->name('profile.show')
+        ->middleware(['auth']);
+
 //authentication stuff
 require __DIR__ . '/auth.php';
+
 
 
 //breeze default log-in destination
@@ -37,18 +44,13 @@ Route::view('/dashboard', 'dashboard')
         ->middleware(['auth'])->name('dashboard');
 
 // CART views
-Route::view('/buy', 'product.buy');
-Route::view('/buy2', 'product.buy2');
-Route::view('/congrats', 'product.congrats');
-
-// USER views
-Route::view('/edit', 'user.edit');
-Route::get('profile', [UserController::class, 'index'])->name('profile.index');
-// Route::view('/profile', '/user/profile');
+Route::view('buy', 'product.buy');
+Route::view('buy2', 'product.buy2');
+Route::view('congrats', 'product.congrats');
 
 // ADMIN views
-Route::view('/admin', 'admin.login');
-Route::view('/admin/login', 'admin.login');
-Route::view('/admin/productlist', 'admin.productlist');
-Route::view('/admin/add', 'admin.add');
-Route::view('/admin/show', 'admin.show');
+Route::view('admin', 'admin.login');
+Route::view('admin/login', 'admin.login');
+Route::view('admin/productlist', 'admin.productlist');
+Route::view('admin/add', 'admin.add');
+Route::view('admin/show', 'admin.show');

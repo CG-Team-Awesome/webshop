@@ -6,7 +6,7 @@
             </a>
         </x-slot>
 
-        <div class="card-body">
+        <div class="card-body login-card">
             <!-- Session Status -->
             <x-auth-session-status class="mb-3" :status="session('status')" />
 
@@ -51,9 +51,9 @@
                             </a>
                         @endif
 
-                        <x-button>
-                            {{ __('Login') }}
-                        </x-button>
+                        <div>
+                            <a href="{{ __('Login') }}"><button class="btn btn-mau shadow-mau">Login</button></a>
+                        </div>
                     </div>
                 </div>
             </form>

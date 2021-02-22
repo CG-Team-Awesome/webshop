@@ -1,10 +1,93 @@
+/* NEW SECTION TOP */
+/* NEW SECTION TOP */
+.new_home_top_div{
+    height: 100vh;
+    background: linear-gradient( rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('~/images/landing_page_images/maxiru_new_top.webp');
+    margin: 0%;
+    padding: 0%;
+}
+.new_home_top_div h1{
+    font-size: 12rem;
+    animation-name: fadeInLogoText001;
+    animation-duration: 1s;
+    opacity: 0%;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInLogoText001 {
+    0% {
+        opacity: 0;
+        transform: translate3d(0,-30%,0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+.new_home_top_div h2{
+
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    color: #401d1a;
+    animation-name: fadeInLogoText002;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    opacity: 0%;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInLogoText002 {
+    0% {
+        opacity: 0;
+        transform: translate3d(-30%,0,0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+
+
+
+
 /* Start Screen Div */
 /* Start Screen Div */
 .start_screen_div {
-    background-image: url('~/images/maxiruheader.jpg');
+    background: linear-gradient( rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('~/images/maxiruheader.jpg');
     height: 100vh;
+    margin: 0%;
+    padding: 0%;
+}
+.start_screen_div p{
+    font-size: 6rem;
 }
 
+
+.fade-in{
+    opacity: 0;
+    transform: translate3d(0,-30%,0);
+    transition:
+        opacity 500ms ease-in,
+        transform 500ms ease-in;
+}
+
+.fade-in.appear{
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
+
+
+.spring-color{
+    color: #cceccc;
+}
+.btn-browse{
+    position: relative;
+    margin: 0%;
+    top: 20%;
+}
 .space_divs {
     height: 8vh;
 }
@@ -12,6 +95,7 @@
     height: 8vh;
     background-color: #401d1a;
 }
+
 
 
 
@@ -257,6 +341,18 @@
 /* MOBILE BREAKPOINTS */
 /* MOBILE BREAKPOINTS */
 @media screen and (max-width: 1000px) {
+    /* NEW TOP DIV MOBILE */
+    /* NEW TOP DIV MOBILE */
+    .new_home_top_div h1{
+        font-size: 8rem;
+    }
+
+    /* OLD TOP DIV MOBILE */
+    /* OLD TOP DIV MOBILE */
+    .start_screen_div p{
+        font-size: 4rem;
+    }
+
     /* BIG DOUBLE PIC LEFT MOBILE*/
     /* BIG DOUBLE PIC LEFT MOBILE*/
     .big_double_divs_pic_left{

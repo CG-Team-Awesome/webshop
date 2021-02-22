@@ -13,8 +13,17 @@ class UserController extends Controller
         
         $user = Auth::user();
 
-        return view('user/profile',
-            
-        );
+        return view('user/profile', [
+            'user' => $user
+        ]);
+    }
+
+    public function show(){
+        
+        $user = Auth::user();
+
+        return view('user/edit', [
+            'user' => $user
+        ]);
     }
 }
