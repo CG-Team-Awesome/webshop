@@ -40,9 +40,12 @@ Route::view('/buy2', '/product/buy2');
 Route::view('/congrats', '/product/congrats');
 
 // USER views
-Route::view('/edit', '/user/edit');
-Route::get('profile', [UserController::class, 'index'])->name('profile.index');
-// Route::view('/profile', '/user/profile');
+Route::view('/edit', [UserController::class, 'show'])
+        ->middleware(['auth']);
+Route::get('profile', [UserController::class, 'index'])
+        ->middleware(['auth'])        
+        ->name('profile.index');
+
 
 // ADMIN views
 Route::view('/admin', '/admin/login');
