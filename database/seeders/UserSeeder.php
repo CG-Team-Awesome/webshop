@@ -29,6 +29,7 @@ class UserSeeder extends Seeder
                 'country' => 'netherlands',
                 'postal_code' => '1234AB',
                 'phone_number' => '0612345678',
+                'company_name' => 'Naamaan',
 
             ],
             [
@@ -43,6 +44,7 @@ class UserSeeder extends Seeder
                 'country' => 'netherlands',
                 'postal_code' => '1234AB',
                 'phone_number' => '0612345678',
+                'company_name' => 'Naamaan',
             ],
             [
                 'id' => 3,
@@ -56,6 +58,7 @@ class UserSeeder extends Seeder
                 'country' => 'netherlands',
                 'postal_code' => '1234AB',
                 'phone_number' => '0612345678',
+                'company_name' => 'Naamaan',
             ]
 
         ]);

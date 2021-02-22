@@ -19,10 +19,10 @@
                             <li class="text-white">Website: {{ $user->website }}</li>
                             <li class="text-white">Postcode: {{ $user->postal_code }}</li>
                             <li class="text-white">Telefoonnummer: {{ $user->phone_number }}</li>
-                            <li class="text-white">Bedrijfsnaam: {{ $user->company }}</li>
+                            <li class="text-white">Bedrijfsnaam: {{ $user->company_name }}</li>
                         </ul>
                     </div>
-                    <a href="/edit"><button class="btn btn-warning pp_edit_btn1">Edit</button></a>
+                    <a href="{{ route('profile.edit')}}"><button class="btn btn-warning pp_edit_btn1">Edit</button></a>
                 </div>
                 <div class="ppl_bot d-flex justify-content-center align-items-center col">
                     <div class="col">Total Orders</div>

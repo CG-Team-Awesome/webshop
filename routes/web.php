@@ -29,10 +29,14 @@ Route::prefix('admin')->name('admin.')->group(function () {
 });
 
 // User routes
-Route::get('profile/edit', [UserController::class, 'show'])->name('profile.edit')
+Route::get('profile/edit', [UserController::class, 'edit'])->name('profile.edit')
         ->middleware(['auth']);
-Route::get('profile', [UserController::class, 'index'])->name('profile.show')
+Route::get('profile', [UserController::class, 'show'])->name('profile.show')
         ->middleware(['auth']);
+Route::put('profile', [UserController::class, 'update'])->name('profile.update')
+        ->middleware(['auth']);
+
+
 
 //authentication stuff
 require __DIR__ . '/auth.php';

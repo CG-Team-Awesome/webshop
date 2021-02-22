@@ -41,7 +41,8 @@ class RegisteredUserController extends Controller
             'postal_code' => 'required|string|max:255', // TODO: Dit moet eigenlijk format-required worden, liefst client- en serverside
             'city' => 'required|string|max:255',
             'phone_number' => 'required|string|max:255', // TODO: Dit moet eigenlijk format-required worden, liefst client- en serverside
-            'company_name' => 'required|string|max:255',
+            'company_name' => 'string|max:255',
+            'website' => 'string|max:255'
 
             // TODO: Land is nog niet toegevoegd want we willen eerst alleen Nederland.
         ]);
@@ -56,7 +57,8 @@ class RegisteredUserController extends Controller
             'postal_code' => $request->postal_code,
             'city' => $request->city,
             'phone_number' => $request->phone_number,
-            'company_name' => $request->company
+            'company_name' => $request->company_name,
+            'website' => $request->website
         ]));
 
         event(new Registered($user));
