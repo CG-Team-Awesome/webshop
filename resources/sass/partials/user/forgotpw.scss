@@ -1,0 +1,17 @@
+.forgot-div{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient( rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('~/images/forgotpw_page_images/forgotpw_background.webp');
+}
+
+
+.card{
+    background-color: none !important;
+    border: transparent !important;
+    padding-right: 0% !important;
+    padding-left: 0% !important;
+}
+.forgot-card{
+    background-color: #a6865b;
+}

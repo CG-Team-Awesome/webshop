@@ -10300,7 +10300,7 @@ body {
 }
 
 .btn-mau {
-  font-family: "Cardo", serif;
+  font-family: "Oswald", sans-serif;
   font-size: 1.5rem;
   background-color: rgba(255, 255, 255, 0.15);
   -webkit-backdrop-filter: blur(4px);
@@ -10316,9 +10316,9 @@ body {
 .btn-mau:hover {
   cursor: pointer;
   transform: scale(1.12);
-  border: 1px #401d1a;
   color: #401d1a;
   background-color: white;
+  margin: 0.4rem;
 }
 
 a:hover, a:visited, a:link, a:active {
@@ -10337,13 +10337,27 @@ a:hover, a:visited, a:link, a:active {
   transition: 0.15s ease-in-out;
 }
 
-#mainNavbar a:hover {
-  border-bottom: 2px solid #401d1a;
-}
-
 .scrolled {
   background-color: white !important;
   transition: background-color 500ms ease-in-out;
+}
+
+.navhover:hover {
+  border-bottom: 2px solid #401d1a;
+}
+
+.logout-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-bottom: none;
+  filter: invert(12%) sepia(17%) saturate(2233%) hue-rotate(318deg) brightness(89%) contrast(92%);
+}
+
+.cart-icon {
+  padding: 0%;
+  height: 1.5rem;
+  width: 1.5rem;
+  filter: invert(12%) sepia(17%) saturate(2233%) hue-rotate(318deg) brightness(89%) contrast(92%);
 }
 
 /* NEW SECTION TOP */
@@ -10991,20 +11005,24 @@ a:hover, a:visited, a:link, a:active {
     background-color: indigo;
   }
 }
-.register_page {
-  height: 100vh;
+.register-div {
   width: 100%;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/images/register_background.webp?5eb911d88ba8efc7ca0cf561036c6d9f);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.register_form_div {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: 100%;
-  background-color: blanchedalmond;
-  padding: 3rem;
-  margin: 3rem;
-  border-radius: 2.5%;
+.card {
+  background-color: none !important;
+  border: transparent !important;
+  padding-right: 0% !important;
+  padding-left: 0% !important;
+}
+
+.register-card {
+  background-color: #a6865b;
 }
 
 /* MOBILE BREAKPOINTS */
@@ -11016,13 +11034,48 @@ a:hover, a:visited, a:link, a:active {
     padding: 1rem;
   }
 }
+.login-div {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/images/login_background.jpg?96d38193adac2fd28b671d57c792bbaa);
+}
+
 .card {
+  background-color: none !important;
+  border: transparent !important;
   padding-right: 0% !important;
   padding-left: 0% !important;
 }
 
 .login-card {
-  border-radius: 5px;
+  background-color: #a6865b;
+}
+
+.SVG-LOGO {
+  fill: white;
+}
+
+.logo-maxiru {
+  font-size: 8rem;
+  margin-bottom: 3rem;
+}
+
+.forgot-div {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/images/forgotpw_background.webp?5944b4629b4f66a4b71647b6c0797ca3);
+}
+
+.card {
+  background-color: none !important;
+  border: transparent !important;
+  padding-right: 0% !important;
+  padding-left: 0% !important;
+}
+
+.forgot-card {
   background-color: #a6865b;
 }
 
