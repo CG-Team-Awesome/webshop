@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Hash;
 
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\ProductImage;
+
 
 
 class ProductSeeder extends Seeder
@@ -25,5 +27,7 @@ class ProductSeeder extends Seeder
         Category::create(['name' => 'riemen']);
 
         Product::factory()->count(50)->create();
+        ProductImage::factory()->count(200)->create();
+
     }
 }

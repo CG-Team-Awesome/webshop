@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Route;
 use App\Models\Product;
 use App\Http\Requests\ProductRequest;
 
@@ -14,9 +15,16 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
+        if (Route::is('admin.product.index')) {
+            $products = Product::all();
 
-        return view('admin.product.index', ['products' => $products]);
+            return view('admin.product.index', ['products' => $products]);
+        } else {
+            $watches = Product::where('category_id', 1)->get();
+            $belts = Product::where('category_id', 2)->get();
+
+            return view('product.index', ['watches' => $watches, 'belts' => $belts]);
+        }
     }
 
     /**
@@ -39,7 +47,7 @@ class ProductController extends Controller
     {
         // TODO |xmh| store stuff
 
-        return redirect()->route('products.show', ['id' => 1]);  // TODO |xmh| use real id
+        return redirect()->route('admin.product.show', ['id' => 1]);  // TODO |xmh| use real id
     }
 
     /**
@@ -52,7 +60,11 @@ class ProductController extends Controller
     {
         $product = Product::where('id', $id)->first();
 
-        return view('product.show', ['product' => $product]);
+        if (Route::is('admin.product.show')) {
+            return view('admin.product.show', ['product' => $product]);
+        } else {
+            return view('product.show', ['product' => $product]);
+        }
     }
 
     /**
@@ -90,6 +102,6 @@ class ProductController extends Controller
     {
         Product::destroy($id);
 
-        return redirect()->route('product.index');
+        return redirect()->route('admin.product.index');
     }
 }

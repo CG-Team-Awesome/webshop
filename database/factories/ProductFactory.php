@@ -26,7 +26,7 @@ class ProductFactory extends Factory
     public function definition()
     {
         return [
-        'product_number' => $this->faker->numberBetween($min = 1, $max = 99),
+        'article_number' => $this->faker->ean13,
         'name' => $this->faker->word,
         'tagline' => $this->faker->sentence,
         'description' => $this->faker->paragraph,
@@ -34,7 +34,6 @@ class ProductFactory extends Factory
         'available_until' => $this->faker->dateTimeBetween('-1 year', '+ 3 years'),
         'supplier_id' => Supplier::factory(),
         'price' => $this->faker->numberBetween($min = 1, $max = 99),
-        'picture' => $this->faker->imageUrl(200,200,'cats'),
         'tax_group_id' => TaxGroup::factory(),
         'category_id' => Category::all()->random()->id,
         'strap_color' => $this->faker->colorName,

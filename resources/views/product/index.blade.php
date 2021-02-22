@@ -15,50 +15,18 @@
 
         {{-- CONTENT OF SECTION HORLOGES --}}
         {{-- CONTENT OF SECTION HORLOGES --}}
-        <a href="{{ Route('products.show','1') }}">
+        @foreach ($watches as $watch)
+        <a href="{{ Route('product.show', $watch->id) }}">
             <div class="card horloge_card text-center">
                 <img class="card-img-top" src="/images/vincero_brown_gold.webp" alt="Card image cap">
                 <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary mt-2">Go somewhere</a>
+                <h5 class="card-title">{{ $watch->name }}</h5>
+                <p class="card-text">{{ $watch->tagline }}</p>
+                <a href="{{ Route('product.show', $watch->id) }}" class="btn btn-primary mt-2">Go somewhere</a>
                 </div>
             </div>
         </a>
-
-        <a href="{{ Route('products.show','1') }}">
-            <div class="card horloge_card text-center">
-                <img class="card-img-top" src="/images/vincero_brown_gold.webp" alt="Card image cap">
-                <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary mt-2">Go somewhere</a>
-                </div>
-            </div>
-        </a>
-
-        <a href="{{ Route('products.show','1') }}">
-            <div class="card horloge_card text-center">
-                <img class="card-img-top" src="/images/vincero_brown_gold.webp" alt="Card image cap">
-                <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary mt-2">Go somewhere</a>
-                </div>
-            </div>
-        </a>
-
-        <a href="{{ Route('products.show','1') }}">
-            <div class="card horloge_card text-center">
-                <img class="card-img-top" src="/images/vincero_brown_gold.webp" alt="Card image cap">
-                <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary mt-2">Go somewhere</a>
-                </div>
-            </div>
-        </a>
-
+        @endforeach
 
     </div>
 
@@ -76,50 +44,18 @@
 
         {{-- SECTION OF SECTION RIEMEN --}}
         {{-- SECTION OF SECTION RIEMEN --}}
-        <a href="{{ Route('products.show','1') }}">
+        @foreach ($belts as $belt)
+        <a href="{{ Route('product.show', $belt->id) }}">
             <div class="card riemen_card text-center">
                 <img class="card-img-top" src="/images/belt_darkbrown.jpg" alt="Card image cap">
                 <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5 class="card-title">$belt->name</h5>
+                <p class="card-text">$belt->tagline</p>
                 <a href="#" class="btn btn-primary mt-2">Go somewhere</a>
                 </div>
             </div>
         </a>
-
-        <a href="{{ Route('products.show','1') }}">
-            <div class="card riemen_card text-center">
-                <img class="card-img-top" src="/images/belt_darkbrown.jpg" alt="Card image cap">
-                <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary mt-2">Go somewhere</a>
-                </div>
-            </div>
-        </a>
-
-        <a href="{{ Route('products.show','1') }}">
-            <div class="card riemen_card text-center">
-                <img class="card-img-top" src="/images/belt_darkbrown.jpg" alt="Card image cap">
-                <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary mt-2">Go somewhere</a>
-                </div>
-            </div>
-        </a>
-
-        <a href="{{ Route('products.show','1') }}">
-            <div class="card riemen_card text-center">
-                <img class="card-img-top" src="/images/belt_darkbrown.jpg" alt="Card image cap">
-                <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary mt-2">Go somewhere</a>
-                </div>
-            </div>
-        </a>
-
+        @endforeach
 
         <a href="/"><button class="btn btn-primary btn-allpd_back2">Back</button></a>
         </div>

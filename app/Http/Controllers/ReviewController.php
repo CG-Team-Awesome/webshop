@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Supplier;
+use App\Models\Review;
 use Illuminate\Http\Request;
 
-class SupplierController extends Controller
+class ReviewController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,7 @@ class SupplierController extends Controller
      */
     public function index()
     {
-        $suppliers = Supplier::all();
-
-        return view('admin.supplier.index', ['suppliers' => $suppliers]);
+        //
     }
 
     /**
@@ -26,7 +24,7 @@ class SupplierController extends Controller
      */
     public function create()
     {
-        return view('admin.supplier.create');
+        //
     }
 
     /**
@@ -37,61 +35,51 @@ class SupplierController extends Controller
      */
     public function store(Request $request)
     {
-        // TODO store stuff
-
-        return redirect()->route('admin.supplier.show', ['id' => 1]);  // TODO use real id
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Review  $review
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Review $review)
     {
-        $supplier = Supplier::where('id', $id)->first();
-
-        return view('admin.supplier.show', ['supplier' => $supplier]);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Review  $review
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Review $review)
     {
-        $supplier = Supplier::where('id', $id)->first();
-
-        return view('admin.supplier.edit', ['supplier' => $supplier]);
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Review  $review
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Review $review)
     {
-        // TODO update stuff
-
-        return redirect()->route('admin.supplier.show', ['id' => 1]); // TODO use real id
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Review  $review
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Review $review)
     {
-        Supplier::destroy($id);
-
-        return redirect()->route('admin.supplier.index');
+        //
     }
 }
