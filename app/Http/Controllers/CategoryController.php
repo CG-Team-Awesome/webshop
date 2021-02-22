@@ -39,7 +39,7 @@ class CategoryController extends Controller
     {
         // TODO store stuff
 
-        return redirect()->route('category.show', ['id' => 1]);  // TODO use real id
+        return redirect()->route('admin.category.show', ['id' => 1]);  // TODO use real id
     }
 
     /**
@@ -79,7 +79,7 @@ class CategoryController extends Controller
     {
         // TODO update stuff
 
-        return redirect()->route('category.show', ['id' => 1]); // TODO use real id
+        return redirect()->route('admin.category.show', ['id' => 1]); // TODO use real id
     }
 
     /**
@@ -92,6 +92,6 @@ class CategoryController extends Controller
     {
         Category::destroy($id);
 
-        return redirect()->route('category.index');
+        return redirect()->route('admin.category.index');
     }
 }

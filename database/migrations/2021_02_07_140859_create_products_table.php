@@ -15,7 +15,7 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string('product_number');
+            $table->string('article_number');
             $table->string('name');
             $table->string('tagline');
             $table->text('description');
@@ -23,7 +23,6 @@ class CreateProductsTable extends Migration
             $table->timestamp('available_until')->nullable();
             $table->foreignId('supplier_id');
             $table->decimal('price', 6,2);
-            $table->string('picture');
             $table->foreignId('tax_group_id');
             $table->foreignId('category_id');
 	        $table->string('strap_color');
