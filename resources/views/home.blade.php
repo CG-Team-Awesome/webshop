@@ -3,34 +3,27 @@
 @section('content')
 
 
-{{-- Login and register --}}
+{{-- NEW TOP DIV WITH LOGO --}}
+{{-- NEW TOP DIV WITH LOGO --}}
+<div class="container-fluid new_home_top_div d-flex justify-content-center align-items-center row">
 
-<div class="container-fluid fixed-top p-4">
-    <div class="col-12">
-        <div class="d-flex justify-content-end">
-            @if (Route::has('login'))
-            <div class="">
-                @auth
-                <a href="{{ url('/dashboard') }}">Dashboard</a>
-                @else
-                <a href="{{ route('login') }}">Login</a>
+    <h1 class="title-font text-white text-center m-2">MAXIRU</h1>
+    <h2 class="title-font text-center m-2"><span class="text-white">MAX</span> your style.</h2>
 
-                @if (Route::has('register'))
-                <a href="{{ route('register') }}" class="ml-4">Register</a>
-                @endif
-                @endif
-            </div>
-            @endif
-        </div>
-    </div>
 </div>
 
+
+
+<div class="space_divs"></div>
 {{-- Start screen div with Button in the middle --}}
 {{-- Start screen div with Button in the middle --}}
 
-<div class="container-fluid start_screen_div d-flex justify-content-center align-items-center">
+<div class="container-fluid start_screen_div d-flex justify-content-center align-items-center row">
 
-    <a href="{{ Route('product.index') }}"><button class="btn btn-mau shadow-mau">Browse</button></a>
+    <p class="title-font text-center text-white col-12 fade-in">
+        Check out our <span class="spring-color">SPRING</span> collection.
+    </p>
+    <a class="" href="{{ Route('product.index') }}"><button class="btn mx-auto btn-mau shadow-mau btn-browse">Browse</button></a>
 
 </div>
 
@@ -40,7 +33,7 @@
 {{-- Product intro with buy options in 4 squares --}}
 {{-- Product intro with buy options in 4 squares --}}
 <div class="container-fluid product_intro_4square_div d-flex justify-content-center align-items-center flex-column">
-    <div class="product_intro_4square_content_div1 mb-5">
+    <div class="product_intro_4square_content_div1 mb-5 fade-in">
         <p class="text-white pi4cd_text product_intro_text text-center row aln-center col-4 col-6-medium text-font">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Odit sapiente molestias quos asperiores. Doloremque, dignissimos quasi.
@@ -65,7 +58,7 @@
     <div class="bddpl_div1 d-flex align-items-center justify-content-center m-1 col-md">
     </div>
     <div class="bddpl_div2 d-flex align-items-center justify-content-center m-1 col-md">
-        <p class="text-white bddpl_div2_txt text-center text-font">
+        <p class="text-white bddpl_div2_txt text-center text-font fade-in">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Porro necessitatibus hic enim nostrum eveniet quis accusantium aliquam velit recusandae provident cum ad eaque officia laboriosam,
             at consectetur, id pariatur assumenda?
@@ -81,7 +74,7 @@
 <div class="container-fluid big_double_divs_pic_right d-flex justify-content-center align-items-center row">
     <div class="bddpr_div2 d-flex align-items-center justify-content-center m-1 col-md">
 
-        <p class="bddpr_div2_txt text-center text-font text-white">
+        <p class="bddpr_div2_txt text-center text-font text-white fade-in">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Porro necessitatibus hic enim nostrum eveniet quis accusantium aliquam velit recusandae provident cum ad eaque officia laboriosam,
             at consectetur, id pariatur assumenda?
@@ -100,7 +93,7 @@
 <div class="container-fluid review_section_frontpage_div d-flex justify-content-center align-items-center row shadow-mau">
     <div class="rsf_div1 d-flex align-items-center justify-content-center col-md-6 col-xs-12">
 
-        <p class="text-white rsf_div1_txt text-center text-font">
+        <p class="text-white rsf_div1_txt text-center text-font fade-in">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Et debitis iste est quis itaque quod fugit, rerum voluptatem maxime voluptates!
             Dolorum veritatis saepe nihil quam blanditiis sit, quod sunt soluta?
@@ -187,5 +180,35 @@
 
 
 <div class="space_divs"></div>
+
+
+
+
+<script>
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+        threshold: 0,
+        rootMargin: "0px 0px -250px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(
+        entries,
+        appearOnScroll
+    ) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting)
+        {
+            return;
+        } else {
+            entry.target.classList.add("appear");
+            appearOnScroll.unobserve(entry.target);
+        }
+    });
+    }, appearOptions);
+        faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+</script>
 
 @endsection
