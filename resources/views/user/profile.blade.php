@@ -9,14 +9,17 @@
             {{-- LEFT HALF PROFILE PAGE --}}
             <div class="profile_page_lefthalf justify-content-center align-items-center col-md">
                 <div class="ppl_top d-flex justify-content-center align-items-center col">
-                    <div class="ppl_top_image_placeholder">PICTURE</div>
-                    <div class="text-center">
+                    {{-- <div class="ppl_top_image_placeholder">PICTURE</div> --}}
+                    <div class="text-left">
                         <ul class="text-white">
-                            <li class="text-white">Name: {{  }}</li>
-                            <li class="text-white">Age</li>
-                            <li class="text-white">Address</li>
-                            <li class="text-white">City</li>
-                            <li class="text-white">Email</li>
+                            <li class="text-white">Naam: {{ $user->first_name . " " . $user->last_name }}</li>
+                            <li class="text-white">E-mail: {{ $user->email }}</li>
+                            <li class="text-white">Adres: {{ $user->address }}</li>
+                            <li class="text-white">Stad: {{ $user->city }}</li>
+                            <li class="text-white">Website: {{ $user->website }}</li>
+                            <li class="text-white">Postcode: {{ $user->postal_code }}</li>
+                            <li class="text-white">Telefoonnummer: {{ $user->phone_number }}</li>
+                            <li class="text-white">Bedrijfsnaam: {{ $user->company }}</li>
                         </ul>
                     </div>
                     <a href="/edit"><button class="btn btn-warning pp_edit_btn1">Edit</button></a>
