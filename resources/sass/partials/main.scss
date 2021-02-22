@@ -28,7 +28,7 @@ $text-font: 'Cardo', serif;
 
 //Buttons
 .btn-mau{
-    font-family: $text-font;
+    font-family: $title-font;
     font-size: 1.5rem;
     background-color: rgba(255, 255, 255, .15);
     backdrop-filter: blur(4px);
@@ -42,9 +42,9 @@ $text-font: 'Cardo', serif;
 .btn-mau:hover{
     cursor: pointer;
     transform: scale(1.12);
-    border: 1px #401d1a;
     color: #401d1a;
     background-color: white;
+    margin: 0.4rem;
 }
 
 
@@ -69,10 +69,25 @@ a:hover, a:visited, a:link, a:active{
     color: #401d1a;
     transition: 0.15s ease-in-out;
 }
-#mainNavbar a:hover{
-    border-bottom: 2px solid #401d1a;
-}
+
 .scrolled{
     background-color: white !important;
     transition: background-color 500ms ease-in-out;
+}
+.navhover:hover{
+    border-bottom: 2px solid #401d1a;
+}
+
+.logout-icon{
+    height: 1.5rem;
+    width: 1.5rem;
+    border-bottom: none;
+    filter: invert(12%) sepia(17%) saturate(2233%) hue-rotate(318deg) brightness(89%) contrast(92%);
+}
+
+.cart-icon{
+    padding: 0%;
+    height: 1.5rem;
+    width: 1.5rem;
+    filter: invert(12%) sepia(17%) saturate(2233%) hue-rotate(318deg) brightness(89%) contrast(92%);
 }

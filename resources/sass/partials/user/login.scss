@@ -1,11 +1,28 @@
 //LOGIN
 //LOGIN
+.login-div{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient( rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('~/images/login_page_images/login_background.jpg');
+}
+
 
 .card{
+    background-color: none !important;
+    border: transparent !important;
     padding-right: 0% !important;
     padding-left: 0% !important;
 }
 .login-card{
-    border-radius: 5px;
     background-color: #a6865b;
+}
+
+.SVG-LOGO{
+    fill: white;
+}
+
+.logo-maxiru{
+    font-size: 8rem;
+    margin-bottom: 3rem;
 }
