@@ -4,9 +4,9 @@
             @if (Route::has('login'))
             <div class="">
                 @auth
-                <a class="mr-5" href="{{ url('/cart') }}"><img src="images/shopping-cart.svg" class="cart-icon" alt="cart svg"></a>
-                <a class="title-font mr-4 navhover" href="{{ url('/profile') }}">Profiel</a>
-                <a href="{{ url('/logout') }}"><img src="images/exit.svg" alt="logout svg" class="logout-icon"></a>
+                <a class="" href="{{ url('/profile') }}"><img src="/images/user.svg" class="user-icon" alt="user svg"></a>
+                <a class="" href="{{ url('/buy') }}"><img src="/images/shopping-cart.svg" class="cart-icon" alt="cart svg"></a>
+                <a href="{{ url('/logout') }}"><img src="/images/exit.svg" alt="logout svg" class="logout-icon"></a>
                 @else
                 <a class="title-font mr-1 navhover" href="{{ route('login') }}">Login</a>
 
