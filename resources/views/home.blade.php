@@ -23,7 +23,8 @@
     <p class="title-font text-center text-white col-12 fade-in">
         Check out our <span class="spring-color">SPRING</span> collection.
     </p>
-    <a class="" href="{{ Route('product.index') }}"><button class="btn mx-auto btn-mau shadow-mau btn-browse">Browse</button></a>
+    <a class="" href="{{ Route('product.index') }}"><button
+            class="btn mx-auto btn-mau shadow-mau btn-browse">Browse</button></a>
 
 </div>
 
@@ -42,11 +43,20 @@
         </p>
     </div>
     <div class="product_intro_4square_content_div2 row aln-center d-flex align-items-center">
-        <div class="product_intro_squaredivs1 shadow-mau m-1 col"><a href="{{ Route('product.show','1') }}"><button class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
-        <div class="product_intro_squaredivs2 shadow-mau m-1 col"><a href="{{ Route('product.show','1') }}"><button class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
-        <div class="product_intro_squaredivs3 shadow-mau m-1 col"><a href="{{ Route('product.show','1') }}"><button class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
-        <div class="product_intro_squaredivs4 shadow-mau m-1 col"><a href="{{ Route('product.show','1') }}"><button class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
-    </div>
+        @foreach ($products as $product)
+        <div class="product_intro_squaredivs1 shadow-mau m-1 col" style="background-image:url('{{ $product->images->first()->url }}')"><a
+                href="{{ Route('product.show', $product->id) }}"><button
+                    class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
+        @endforeach
+        {{-- <div class="product_intro_squaredivs1 shadow-mau m-1 col"><a href="{{ Route('product.show','1') }}"><button
+            class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
+    <div class="product_intro_squaredivs2 shadow-mau m-1 col"><a href="{{ Route('product.show','1') }}"><button
+                class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
+    <div class="product_intro_squaredivs3 shadow-mau m-1 col"><a href="{{ Route('product.show','1') }}"><button
+                class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
+    <div class="product_intro_squaredivs4 shadow-mau m-1 col"><a href="{{ Route('product.show','1') }}"><button
+                class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div> --}}
+</div>
 </div>
 
 
@@ -60,7 +70,8 @@
     <div class="bddpl_div2 d-flex align-items-center justify-content-center m-1 col-md">
         <p class="text-white bddpl_div2_txt text-center text-font fade-in">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Porro necessitatibus hic enim nostrum eveniet quis accusantium aliquam velit recusandae provident cum ad eaque officia laboriosam,
+            Porro necessitatibus hic enim nostrum eveniet quis accusantium aliquam velit recusandae provident cum ad
+            eaque officia laboriosam,
             at consectetur, id pariatur assumenda?
         </p>
     </div>
@@ -76,7 +87,8 @@
 
         <p class="bddpr_div2_txt text-center text-font text-white fade-in">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Porro necessitatibus hic enim nostrum eveniet quis accusantium aliquam velit recusandae provident cum ad eaque officia laboriosam,
+            Porro necessitatibus hic enim nostrum eveniet quis accusantium aliquam velit recusandae provident cum ad
+            eaque officia laboriosam,
             at consectetur, id pariatur assumenda?
         </p>
     </div>
@@ -90,7 +102,8 @@
 
 {{-- Review Section Front Page --}}
 {{-- Review Section Front Page --}}
-<div class="container-fluid review_section_frontpage_div d-flex justify-content-center align-items-center row shadow-mau">
+<div
+    class="container-fluid review_section_frontpage_div d-flex justify-content-center align-items-center row shadow-mau">
     <div class="rsf_div1 d-flex align-items-center justify-content-center col-md-6 col-xs-12">
 
         <p class="text-white rsf_div1_txt text-center text-font fade-in">
@@ -103,42 +116,17 @@
     </div>
 
     <div class="rsf_div2 d-flex row aln-center d-flex align-items-center col-md-6 col-xs-12">
+        @foreach ($reviews as $review)
         <div class="rsf_div2_box1 col-5 mx-auto text-center col-xs-12 text-font shadow-mau">
-            <h2>*****</h2>
-            <p>______________________________________</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Cumque, tempora at. Reprehe nisi,
-                facere doloribus sint perspiciatis maiores
-                quae quia nesciunt nihil adipisci dignissimos doloremque
-                blanditiis voluptatibus.</p>
+            <h2>
+                @for ($i=0;$i<$review->rating;$i++)
+                    *
+                    @endfor
+            </h2>
+            <p>______________________________________</p> {{-- // TODO Maurice, change into <hr /> or something --}}
+            <p>{{ $review->review }}</p>
         </div>
-        <div class="rsf_div2_box2 col-5 mx-auto text-center col-xs-12 text-font shadow-mau">
-            <h2>*****</h2>
-            <p>______________________________________</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Cumque, tempora at. Reprehe nisi,
-                facere doloribus sint perspiciatis maiores
-                quae quia nesciunt nihil adipisci dignissimos doloremque
-                blanditiis voluptatibus.</p>
-        </div>
-        <div class="rsf_div2_box3 col-5 mx-auto text-center col-xs-12 text-font shadow-mau">
-            <h2>*****</h2>
-            <p>______________________________________</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Cumque, tempora at. Reprehe nisi,
-                facere doloribus sint perspiciatis maiores
-                quae quia nesciunt nihil adipisci dignissimos doloremque
-                blanditiis voluptatibus.</p>
-        </div>
-        <div class="rsf_div2_box4 col-5 mx-auto text-center col-xs-12 text-font shadow-mau">
-            <h2>*****</h2>
-            <p>______________________________________</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Cumque, tempora at. Reprehe nisi,
-                facere doloribus sint perspiciatis maiores
-                quae quia nesciunt nihil adipisci dignissimos doloremque
-                blanditiis voluptatibus.</p>
-        </div>
+        @endforeach
     </div>
 </div>
 

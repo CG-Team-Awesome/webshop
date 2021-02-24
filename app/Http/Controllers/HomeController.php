@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\{Product, Review};
 
 class HomeController extends Controller
 {
@@ -13,9 +14,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // TODO get data for different stuff on homepage.
+        $products = Product::with('images')->inRandomOrder()->limit(4)->get();
+        $reviews = Review::latest()->limit(4)->get();
 
-        return view('home'); // TODO rename view to home.
+        return view('home', ['products' => $products, 'reviews' => $reviews]);
     }
 
     /**

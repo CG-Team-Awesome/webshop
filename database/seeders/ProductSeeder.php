@@ -4,12 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\{DB, Hash};
 
-use App\Models\Product;
-use App\Models\Category;
-use App\Models\ProductImage;
+use App\Models\{Category, Product, ProductImage, Review};
 
 
 
@@ -27,7 +24,9 @@ class ProductSeeder extends Seeder
         Category::create(['name' => 'riemen']);
 
         Product::factory()->count(50)->create();
+
         ProductImage::factory()->count(200)->create();
+        Review::factory()->count(200)->create();
 
     }
 }
