@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{HomeController, ProductController, CategoryController, SupplierController, UserController};
+use App\Http\Controllers\{HomeController, ProductController, CategoryController, SupplierController, UserController, RoleController};
 
 /*
 |--------------------------------------------------------------------------
@@ -28,8 +28,11 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('supplier', SupplierController::class);
 });
 
-// Admin: User control
-Route::get('/admin/users/index', [UserController::class, 'index'])->name('admin.users');
+// Admin: User en Roles control
+Route::group(['middleware' => ['auth']], function() {
+        Route::resource('roles', RoleController::class);
+        Route::resource('users', UserController::class);
+});
 
 // User routes
 Route::get('profile/edit', [UserController::class, 'edit'])->name('profile.edit')
@@ -38,6 +41,8 @@ Route::get('profile', [UserController::class, 'show'])->name('profile.show')
         ->middleware(['auth']);
 Route::put('profile', [UserController::class, 'update'])->name('profile.update')
         ->middleware(['auth']);
+
+        
 
 
 
