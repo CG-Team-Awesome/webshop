@@ -10985,10 +10985,6 @@ a:hover, a:visited, a:link, a:active {
   box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
 }
 
-.ppr_1_txt {
-  width: 12rem;
-}
-
 .ppr_2 {
   height: 10em;
   width: 40rem;
@@ -11007,13 +11003,15 @@ a:hover, a:visited, a:link, a:active {
   margin-top: 1rem;
 }
 
-.ppr_1_img, .ppr_2_img, .ppr_3_img {
-  background-color: #a6865b;
-  max-height: 10rem;
-  max-width: 10rem;
+.ppr_1_img {
+  max-height: 12rem;
+  max-width: 12rem;
   margin-right: 3em;
   border-radius: 5px;
   box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
+  position: relative;
+  right: 16%;
+  top: 0%;
 }
 
 .profile_btn_mob {
@@ -11061,13 +11059,8 @@ a:hover, a:visited, a:link, a:active {
     flex-direction: row;
   }
 
-  .ppr_1_img, .ppr_2_img, .ppr_3_img {
-    max-height: 90%;
-    max-width: 30%;
-  }
-
-  .ppr_1_txt {
-    width: 20rem;
+  .ppr_1_img {
+    right: 4%;
   }
 
   .profile_btn_pc {
@@ -11077,8 +11070,7 @@ a:hover, a:visited, a:link, a:active {
   .profile_btn_mob {
     display: block;
     margin-left: 12rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 5rem;
   }
 
   .profile_page_righthalf {
@@ -11207,17 +11199,38 @@ a:hover, a:visited, a:link, a:active {
 .edit_page {
   height: 100vh;
   width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/images/profile_page_images/edit_profile_background.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .edit_form_div {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: 100%;
-  background-color: blanchedalmond;
+  background-color: #a6865b;
+  border-radius: 5px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
+  width: 80%;
   padding: 3rem;
 }
 
+@media screen and (max-width: 1000px) {
+  .edit_page {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+
+  .edit_form_div {
+    margin-top: 5rem;
+    width: 95%;
+    padding: 3rem;
+  }
+}
 .buy_page_container_div {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/images/buy_page_images/buy_background.webp");
   height: 100vh;

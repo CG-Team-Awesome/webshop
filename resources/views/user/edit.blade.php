@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <div class="container edit_page d-flex align-items-center">
+    <div class="container-fluid edit_page d-flex align-items-center justify-content-center">
         <div class="edit_form_div">
             <form method="post" action="/profile">
                 @csrf
@@ -19,11 +19,11 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="inputEmail4">E-mail</label> 
+                            <label for="inputEmail4">E-mail</label>
                             <input type="email" class="form-control" id="inputEmail4" name="email" value="{{ $user->email }}">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="phone_number">Telefoonnummer</label> 
+                            <label for="phone_number">Telefoonnummer</label>
                             <input type="phone_number" class="form-control" id="phone_number" name="phone_number" value="{{ $user->phone_number }}">
                         </div>
 
@@ -53,7 +53,7 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Bijwerken</button>
+                    <button type="submit" class="btn btn-mau shadow-mau">Bijwerken</button>
             </form>
         </div>
     </div>

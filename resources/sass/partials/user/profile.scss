@@ -78,9 +78,6 @@
     border-radius: 5px;
     box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
 }
-.ppr_1_txt{
-    width: 12rem;
-}
 .ppr_2{
     height: 10em;
     width: 40rem;
@@ -98,13 +95,15 @@
     margin-top: 1rem;;
 }
 
-.ppr_1_img, .ppr_2_img, .ppr_3_img{
-    background-color: #a6865b;
-    max-height: 10rem;
-    max-width: 10rem;
+.ppr_1_img {
+    max-height: 12rem;
+    max-width: 12rem;
     margin-right: 3em;
     border-radius: 5px;
     box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
+    position: relative;
+    right: 16%;
+    top: 0%;
 }
 
 .profile_btn_mob{
@@ -151,12 +150,8 @@
         flex-direction: row;
 
     }
-    .ppr_1_img, .ppr_2_img, .ppr_3_img{
-        max-height: 90%;
-        max-width: 30%;
-    }
-    .ppr_1_txt{
-        width: 20rem;
+    .ppr_1_img{
+        right: 4%;
     }
     .profile_btn_pc{
         display: none;
@@ -164,8 +159,7 @@
     .profile_btn_mob{
         display: block;
         margin-left: 12rem;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        margin-top: 5rem;
     }
     .profile_page_righthalf{
         height: fit-content;

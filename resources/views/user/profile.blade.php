@@ -53,28 +53,31 @@
             {{-- RIGHT HALF PROFILE PAGE --}}
             {{-- RIGHT HALF PROFILE PAGE --}}
             <div class="profile_page_righthalf col-md">
-                <div class="ppr_1 col d-flex align-items-center">
-                    <div class="ppr_1_txt">
-                        <img class="ppr_1_img" src="/images/landing_page_images/example_belt_01.jpg" alt="image of black leather belt"></div>
-                        <div class="d-flex align-items-center justify-content-center row">
-                            <h3 class="text-white text-left title-font col-12">Black Styled Belt L</h3>
-                            <h4 class="text-white text-left title-font col-12">Shipped on 21/02/2021</h4>
+
+                <div class="ppr_1 d-flex align-items-center justify-content-center">
+                        <img class="ppr_1_img" src="/images/landing_page_images/example_belt_01.jpg" alt="image of black leather belt">
+                        <div>
+                            <h3 class="text-white text-left title-font">Black Styled Belt L</h3>
+                            <h4 class="text-white text-left title-font">Shipped on 23/02/2021</h4>
                         </div>
+                </div>
+
+                <div class="ppr_2 d-flex align-items-center justify-content-center">
+                    <img class="ppr_1_img" src="/images/landing_page_images/example_belt_01.jpg" alt="image of black leather belt">
+                    <div>
+                        <h3 class="text-white text-left title-font">Black Styled Belt L</h3>
+                        <h4 class="text-white text-left title-font">Shipped on 23/02/2021</h4>
                     </div>
                 </div>
-                <div class="ppr_2 col d-flex align-items-center">
-                    <div class="ppr_2_txt text-white text-center title-font">
-                        <h3 class="text-white text-left title-font">Cheeki Breeki Gold Watch</h3>
-                        <h4 class="text-white text-left title-font">Shipped on 15/02/2021</h4>
+
+                <div class="ppr_2 d-flex align-items-center justify-content-center">
+                    <img class="ppr_1_img" src="/images/landing_page_images/example_belt_01.jpg" alt="image of black leather belt">
+                    <div>
+                        <h3 class="text-white text-left title-font">Black Styled Belt L</h3>
+                        <h4 class="text-white text-left title-font">Shipped on 23/02/2021</h4>
                     </div>
                 </div>
-                <div class="ppr_3 col d-flex align-items-center">
-                    <div class="ppr_3_txt text-white text-center title-font">
-                        <h3 class="text-white text-left title-font">Brown Styled Belt M</h3>
-                        <h4 class="text-white text-left title-font">Shipped on 21/01/2021</h4>
-                    </div>
-                </div>
-            </div>
+
             <a href="/" class="profile_btn_mob"><button class="btn btn-mau shadow-mau">Back</button></a>
         </div>
     </div>

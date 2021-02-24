@@ -20,24 +20,6 @@
                         alt="{{ $image->alt }}" data-target="#carouselExample" data-slide-to="0">
                     </div>
                     @endforeach
-
-                    {{-- <div class="sp_left_div1_container d-flex justify-content-center align-items-center">
-                        <img class="sp_left_div1_img" src="/images/show_page_images/example_riem_01.png"
-                        alt="example_belt_01" data-target="#carouselExample" data-slide-to="0">
-                    </div>
-                    <div class="sp_left_div1_container d-flex justify-content-center align-items-center">
-                        <img class="sp_left_div1_img" src="/images/show_page_images/example_riem_02.png"
-                        alt="example_belt_02" data-target="#carouselExample" data-slide-to="1">
-                    </div>
-                    <div class="sp_left_div1_container d-flex justify-content-center align-items-center">
-                        <img class="sp_left_div1_img" src="/images/show_page_images/example_riem_03.png"
-                        alt="example_belt_03" data-target="#carouselExample" data-slide-to="2">
-                    </div>
-                    <div class="sp_left_div1_container d-flex justify-content-center align-items-center">
-                        <img class="sp_left_div1_img" src="/images/show_page_images/example_riem_04.png"
-                        alt="example_belt_04" data-target="#carouselExample" data-slide-to="3">
-                    </div> --}}
-
                     <button class="btn btn-mau atc-btn shadow-mau">Add to Cart</button>
                 </div>
 
@@ -80,10 +62,14 @@
                 <div class="sp_left_div3 d-flex justify-content-center align-items-center row">
                     <h1 class="text-white text-center col-12 mb-4 title-font"> Reviews </h1>
                     <div class="div3_review_div col-12 shadow-mau">
-                        {{ $product->reviews->first()->review }}
+                        <h3 class="text-white text-center text-font mt-4">
+                            {{ $product->reviews->first()->review }}
+                        </h3>
                     </div>
                     <div class="div3_review_div col-12 shadow-mau">
-                        {{ $product->reviews->first()->review }}
+                        <h3 class="text-white text-center text-font mt-4">
+                            {{ $product->reviews->first()->review }}
+                        </h3>
                     </div>
                     <button class="btn btn-success btn-review shadow-mau">+</button>
                     <a href="/"><button class="btn btn-mau shadow-mau btn-showpage2">Back</button></a>
