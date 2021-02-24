@@ -1,11 +1,13 @@
 .profile_page_main{
     height: 100vh;
-    background-color: royalblue;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3) ), url("/images/profile_page_images/profile_background.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0%;
 }
 .profile_page_div1{
     height: 90%;
-    background-color: khaki;
 }
 
 
@@ -18,22 +20,48 @@
 // LEFT HALF PROFILE PAGE
 .profile_page_lefthalf{
     height: 100%;
-    background-color: indigo;
+    margin-top: 3rem;
 }
 .ppl_top{
-    background-color: red;
+    background-color: #a6865b;
     height: 50%;
-    padding: 5rem;
+    padding: 3rem;
+    border-radius: 5px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
 }
 .ppl_bot{
-    background-color: rgb(100, 8, 8);
-    height: 50%;
+    margin-top: 1rem;
+    height: 40%;
     padding: 5rem;
+}
+.profile_info_block1{
+    background-color: #a6865b;
+    height: 10rem;
+    width: 15rem;
+    border-radius: 5px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.profile_underline{
+    border-bottom: 2px dashed #776042;
+    width: 95%;
+    position: relative;
 }
 .pp_edit_btn1{
     position: absolute;
-    top: 85%;
+    top: 40%;
     right: 5%;
+    z-index: 99;
+}
+.profile_btn_pc{
+    margin-top: 1rem;
+    position: relative;
+    bottom: 5%;
+}
+.profile_block_underline{
+    border-bottom: 2px dashed #776042;
+    width: 80%;
 }
 
 
@@ -41,38 +69,42 @@
 // RIGHT HALF PROFILE PAGE
 .profile_page_righthalf{
     height: 100%;
-    background-color: lightblue;
+    margin-top: 3rem;
 }
 .ppr_1{
-    background-color: rosybrown;
     height: 10em;
-    width: 80%;
-    position: absolute;
-    top: 25%;
-    left: 15%;
+    width: 40rem;
+    background-color: #a6865b;
+    border-radius: 5px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
+}
+.ppr_1_txt{
+    width: 12rem;
 }
 .ppr_2{
-    background-color: rosybrown;
     height: 10em;
-    width: 80%;
-    position: absolute;
-    top: 50%;
-    left: 15%;
+    width: 40rem;
+    background-color: #a6865b;
+    border-radius: 5px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
+    margin-top: 1rem;
 }
 .ppr_3{
-    background-color: rosybrown;
     height: 10em;
-    width: 80%;
-    position: absolute;
-    top: 75%;
-    left: 15%;
+    width: 40rem;
+    background-color: #a6865b;
+    border-radius: 5px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
+    margin-top: 1rem;;
 }
 
 .ppr_1_img, .ppr_2_img, .ppr_3_img{
-    background-color: royalblue;
-    height: 80%;
-    width: 20%;
+    background-color: #a6865b;
+    max-height: 10rem;
+    max-width: 10rem;
     margin-right: 3em;
+    border-radius: 5px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
 }
 
 .profile_btn_mob{
@@ -92,17 +124,39 @@
 /* MOBILE BREAKPOINTS */
 /* MOBILE BREAKPOINTS */
 @media screen and (max-width: 1000px) {
+    .profile_page_lefthalf{
+        height: fit-content;
+        margin: 0%;
+        padding: 1rem;
+    }
     .profile_page_main{
         height: fit-content;
+    }
+    .profile_page_div1{
+        height: 100%;
+        height: fit-content;
+        margin: 0%;
+        padding: 0%;
+        width: 100%;
+    }
+    .profile_underline{
+        margin-top: 0.4rem;
+        margin-bottom: 0.4rem;
     }
     .ppr_1, .ppr_2, .ppr_3{
         position: relative;
         width: 100%;
         left: auto;
-        margin-top: 1em;
+        margin-top: 2em;
+        flex-direction: row;
+
     }
     .ppr_1_img, .ppr_2_img, .ppr_3_img{
-        width: 35%;
+        max-height: 90%;
+        max-width: 30%;
+    }
+    .ppr_1_txt{
+        width: 20rem;
     }
     .profile_btn_pc{
         display: none;
@@ -115,13 +169,45 @@
     }
     .profile_page_righthalf{
         height: fit-content;
-        background-color: lightblue;
         margin-bottom: 2rem;
         padding-bottom: 2rem;
     }
     .profile_page_lefthalf{
         height: 100vh;
-        background-color: indigo;
+        margin-top: 5rem;
+    }
+
+
+
+
+    .profile_page_righthalf{
+        margin-top: 0;
+    }
+    .ppl_top{
+        height: fit-content;
+        margin-left: 0.1rem;
+        margin-right: 0.1rem;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+        margin-bottom: 3rem;
+    }
+    .pp_edit_btn1{
+        position: relative;
+        top: 60%;
+        left: 100%;
+    }
+    .ppl_bot{
+        margin-top: 5rem;
+        width: 100%;
+        flex-direction: column;
+        padding: 0%;
+        margin: 0%;
+    }
+    .profile_info_block1{
+        width: 100%;
+        margin: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
     }
 
 }
