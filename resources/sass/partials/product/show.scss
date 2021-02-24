@@ -30,13 +30,10 @@
 .sp_left_div1{
     width: 60rem;
     height: 40rem;
-    background-color: #5c2b26;
     margin-left: 10rem;
     margin-right: 5rem;
     position: absolute;
     left: 0%;
-    border-radius: 10px;
-    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
 }
 .sp_left_div1 h1{
     font-weight: bold;
@@ -66,16 +63,13 @@
 .sp_left_div2{
     width: 60rem;
     height: 40rem;
-    background-color: #5c2b26;
     margin-left: 10rem;
     margin-right: 15rem;
     position: absolute;
     left: 30%;
-    border-radius: 10px;
-    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
 }
 .sp_left_div2_inner{
-    width: 90%;
+    width: 95%;
     height: 80%;
     background-color: #a6865b;
     border-radius: 5px;
@@ -95,14 +89,11 @@
 .sp_left_div3{
     width: 60rem;
     height: 40rem;
-    background-color: #5c2b26;
     margin-left: 10rem;
     margin-right: 15rem;
     position: absolute;
     left: 60%;
     padding: 3rem;
-    border-radius: 10px;
-    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
 }
 .sp_left_div3 h1{
     font-weight: bold;
@@ -189,6 +180,7 @@
     .show_page_inner-wrapper {
         transform: none;
         transform-origin: top left;
+        width: 200vw;
     }
     .show_page_outer-wrapper {
         width: 100%;
@@ -214,6 +206,10 @@
     // LEFT HALF DIV MOBILE
     // LEFT HALF DIV MOBILE
     .sp_lefthalf{
+        background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0) ), url("/images/show_page_images/ultra_wide_test.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         height: fit-content;
         flex-direction: column;
         padding: 0%;
@@ -225,7 +221,8 @@
         margin: 0%;
         left: 0%;
         position: relative;
-        width: 110%;
+        width: 100%;
+        padding: 0%;
         border-radius: 0px;
         padding-top: 7rem;
     }

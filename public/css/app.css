@@ -10351,6 +10351,10 @@ a:hover, a:visited, a:link, a:active {
   width: 1.5rem;
   border-bottom: none;
   filter: invert(12%) sepia(17%) saturate(2233%) hue-rotate(318deg) brightness(89%) contrast(92%);
+  position: relative;
+  right: 1%;
+  top: 5%;
+  transition: 0.2s;
 }
 
 .cart-icon {
@@ -10358,6 +10362,33 @@ a:hover, a:visited, a:link, a:active {
   height: 1.5rem;
   width: 1.5rem;
   filter: invert(12%) sepia(17%) saturate(2233%) hue-rotate(318deg) brightness(89%) contrast(92%);
+  position: relative;
+  right: 26%;
+  top: 5%;
+  transition: 0.2s;
+}
+
+.user-icon {
+  padding: 0%;
+  height: 1.5rem;
+  width: 1.5rem;
+  filter: invert(12%) sepia(17%) saturate(2233%) hue-rotate(318deg) brightness(89%) contrast(92%);
+  position: relative;
+  right: 51%;
+  top: 5%;
+  transition: 0.2s;
+}
+
+.logout-icon:hover {
+  filter: invert(57%) sepia(7%) saturate(2261%) hue-rotate(355deg) brightness(94%) contrast(84%);
+}
+
+.cart-icon:hover {
+  filter: invert(57%) sepia(7%) saturate(2261%) hue-rotate(355deg) brightness(94%) contrast(84%);
+}
+
+.user-icon:hover {
+  filter: invert(57%) sepia(7%) saturate(2261%) hue-rotate(355deg) brightness(94%) contrast(84%);
 }
 
 /* NEW SECTION TOP */
@@ -10646,16 +10677,10 @@ a:hover, a:visited, a:link, a:active {
 .rsf_div1 {
   height: 90%;
   min-width: 50%;
-  background-color: #5c2b26;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
 }
 
 .rsf_div2 {
   height: 90%;
-  background-color: #5c2b26;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
 }
 
 .rsf_div1_txt {
@@ -11094,19 +11119,21 @@ a:hover, a:visited, a:link, a:active {
 }
 
 .buy_page_container_div {
-  background-color: ivory;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/images/buy_page_images/buy_background.webp");
   height: 100vh;
+  margin: 0%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .bp_div1 {
-  background-color: khaki;
   margin: 0%;
 }
 
 .bp_div1_cart {
   height: 4rem;
   width: 18rem;
-  background-color: #5a5a70;
   position: absolute;
   top: 30%;
 }
@@ -11114,9 +11141,10 @@ a:hover, a:visited, a:link, a:active {
 .bp_div1_img {
   height: 12rem;
   width: 18rem;
-  background-color: #5e5ed1;
   position: absolute;
   top: 43%;
+  border-radius: 5px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
 }
 
 .bp_btn_back1 {
@@ -11126,41 +11154,88 @@ a:hover, a:visited, a:link, a:active {
 }
 
 .bp_div2 {
-  background-color: yellow;
   margin: 0%;
 }
 
 .bp_div2_tracker {
-  background-color: #d64f4f;
   height: 5rem;
   width: 40rem;
   position: absolute;
   top: 20%;
 }
 
+.number1-icon {
+  height: 3rem;
+  width: 3rem;
+  filter: invert(100%) sepia(7%) saturate(7436%) hue-rotate(158deg) brightness(119%) contrast(102%);
+  margin-right: 3rem;
+}
+
+.number2-icon {
+  height: 3rem;
+  width: 3rem;
+  filter: invert(59%) sepia(4%) saturate(3991%) hue-rotate(355deg) brightness(91%) contrast(83%);
+  margin-left: 3rem;
+}
+
+.dashedline-icon {
+  height: 3rem;
+  width: 3rem;
+  filter: invert(59%) sepia(4%) saturate(3991%) hue-rotate(355deg) brightness(91%) contrast(83%);
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .bp_div2_info {
-  background-color: #a15858;
   height: 19.7rem;
   width: 50rem;
   position: absolute;
   top: 30%;
 }
 
+.bp_div2_info_inner {
+  height: 90%;
+  width: 95%;
+  background-color: #a6865b;
+  border-radius: 5px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
+}
+
+.product_name_underline_buy {
+  border-bottom: 2px dashed #776042;
+  width: 90%;
+  position: relative;
+  top: -40%;
+}
+
 .bp_div2_discount {
-  background-color: #441111;
   height: 8rem;
   width: 50rem;
   position: absolute;
   top: 65%;
 }
 
+.bp_div2_discount_inner {
+  height: 80%;
+  width: 95%;
+  background-color: #a6865b;
+  border-radius: 5px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
+}
+
+.discount_code {
+  background-color: #5c2b26;
+  height: 3rem;
+  border-radius: 5px;
+  font-size: 2rem;
+  width: 8ch;
+}
+
 .bp_div3 {
-  background-color: indianred;
   margin: 0%;
 }
 
 .bp_div3_total {
-  background-color: cadetblue;
   height: 19.7rem;
   width: 18rem;
   position: absolute;
@@ -11173,11 +11248,19 @@ a:hover, a:visited, a:link, a:active {
   width: 15rem;
   position: absolute;
   top: 75%;
-  left: 18.5%;
+  left: 21.5%;
 }
 
 .bp_btn_back2 {
   display: none;
+}
+
+.bp_div3_total_inner {
+  height: 90%;
+  width: 90%;
+  background-color: #a6865b;
+  border-radius: 5px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
 }
 
 /* MOBILE BREAKPOINTS */
@@ -11204,12 +11287,15 @@ a:hover, a:visited, a:link, a:active {
   .bp_div1_cart {
     width: 100%;
     position: relative;
+    margin-top: 6rem;
   }
 
   .bp_div1_img {
     width: 100%;
-    margin-top: 1rem;
+    height: 80%;
     position: relative;
+    top: 10%;
+    margin-bottom: 3rem;
   }
 
   .bp_btn_back1 {
@@ -11220,13 +11306,13 @@ a:hover, a:visited, a:link, a:active {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    margin-top: 1rem;
+    margin-top: 2rem;
     width: 100%;
   }
 
   .bp_div2_tracker {
     position: relative;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 
   .bp_div2_info {
@@ -11237,6 +11323,10 @@ a:hover, a:visited, a:link, a:active {
   .bp_div2_discount {
     position: relative;
     margin-top: 1rem;
+  }
+
+  .bp_div2_discount_inner {
+    width: 95%;
   }
 
   .bp_div3 {
@@ -11253,27 +11343,30 @@ a:hover, a:visited, a:link, a:active {
   }
 
   .bp_div3_cont {
-    position: relative;
-    margin-top: 1rem;
-    width: 100%;
-    left: 0%;
+    height: 5rem;
+    width: 8rem;
+    position: fixed;
+    left: 70%;
+    top: 85%;
   }
 
   .bp_btn_back2 {
     display: block;
     margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .bp_div3_total_inner {
+    width: 95%;
   }
 }
 .bp_div1_pt2 {
-  background-color: khaki;
   margin: 0%;
 }
 
 .bp_div1_cart_pt2 {
   height: 4rem;
   width: 18rem;
-  background-color: #5a5a70;
   position: absolute;
   top: 30%;
 }
@@ -11281,9 +11374,10 @@ a:hover, a:visited, a:link, a:active {
 .bp_div1_img_pt2 {
   height: 12rem;
   width: 18rem;
-  background-color: #5e5ed1;
   position: absolute;
   top: 43%;
+  border-radius: 5px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
 }
 
 .bp_btn_back1_pt2 {
@@ -11293,36 +11387,97 @@ a:hover, a:visited, a:link, a:active {
 }
 
 .bp_div2_pt2 {
-  background-color: yellow;
   margin: 0%;
 }
 
 .bp_div2_tracker_pt2 {
-  background-color: #d64f4f;
   height: 5rem;
   width: 40rem;
   position: absolute;
   top: 20%;
 }
 
+.number1-icon-pt2 {
+  height: 3rem;
+  width: 3rem;
+  filter: invert(100%) sepia(7%) saturate(7436%) hue-rotate(158deg) brightness(119%) contrast(102%);
+  margin-right: 3rem;
+}
+
+.number2-icon-pt2 {
+  height: 3rem;
+  width: 3rem;
+  filter: invert(100%) sepia(7%) saturate(7436%) hue-rotate(158deg) brightness(119%) contrast(102%);
+  margin-left: 3rem;
+}
+
+.dashedline-icon-pt2 {
+  height: 3rem;
+  width: 3rem;
+  filter: invert(100%) sepia(7%) saturate(7436%) hue-rotate(158deg) brightness(119%) contrast(102%);
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .bp_div2_info_pt2 {
-  background-color: #a15858;
   height: 19.7rem;
   width: 50rem;
   position: absolute;
   top: 30%;
 }
 
+.bp_div2_info_inner_pt2 {
+  height: 90%;
+  width: 95%;
+  background-color: #a6865b;
+  border-radius: 5px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
+}
+
+.product_name_underline_buy_pt2 {
+  border-bottom: 2px dashed #776042;
+  width: 90%;
+  position: relative;
+  top: -15.5%;
+}
+
+.ideal-icon {
+  height: 6rem;
+  width: 6rem;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+.bitcoin-icon {
+  height: 6rem;
+  width: 6rem;
+  cursor: pointer;
+  margin-left: 2rem;
+}
+
 .bp_div2_delivery_pt2 {
-  background-color: #441111;
   height: 14rem;
   width: 50rem;
   position: absolute;
   top: 65%;
 }
 
+.bp_div2_delivery_pt2_inner {
+  height: 85%;
+  width: 95%;
+  background-color: #a6865b;
+  border-radius: 5px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
+}
+
+.expected_delivery_underline {
+  border-bottom: 2px dashed #776042;
+  width: 90%;
+  position: relative;
+  bottom: 30%;
+}
+
 .bp_div3_pt2 {
-  background-color: indianred;
   margin: 0%;
 }
 
@@ -11332,7 +11487,7 @@ a:hover, a:visited, a:link, a:active {
   width: 15rem;
   position: absolute;
   top: 75%;
-  left: 18.5%;
+  left: 21.5%;
 }
 
 .bp_btn_back2_pt2 {
@@ -11353,12 +11508,15 @@ a:hover, a:visited, a:link, a:active {
   .bp_div1_cart_pt2 {
     width: 100%;
     position: relative;
+    margin-top: 6rem;
   }
 
   .bp_div1_img_pt2 {
     width: 100%;
-    margin-top: 1rem;
+    height: 80%;
     position: relative;
+    top: 10%;
+    margin-bottom: 3rem;
   }
 
   .bp_btn_back1_pt2 {
@@ -11370,11 +11528,12 @@ a:hover, a:visited, a:link, a:active {
     height: -moz-fit-content;
     height: fit-content;
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 
   .bp_div2_tracker_pt2 {
     position: relative;
+    margin-top: 2rem;
   }
 
   .bp_div2_info_pt2 {
@@ -11401,10 +11560,11 @@ a:hover, a:visited, a:link, a:active {
   }
 
   .bp_div3_cont_pt2 {
-    position: relative;
-    margin-top: 1rem;
-    width: 100%;
-    left: 0%;
+    height: 5rem;
+    width: 8rem;
+    position: fixed;
+    left: 70%;
+    top: 85%;
   }
 
   .bp_btn_back2_pt2 {
@@ -11414,7 +11574,10 @@ a:hover, a:visited, a:link, a:active {
   }
 }
 .congrats_page_div {
-  background-color: blanchedalmond;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/congrats_page_images/congrats_background.webp");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
   width: 100%;
 }
@@ -11425,11 +11588,19 @@ a:hover, a:visited, a:link, a:active {
   left: 85%;
 }
 
+.congrats_page_div p {
+  font-size: 4rem;
+}
+
 @media screen and (max-width: 1000px) {
   .btn-congrats {
     position: absolute;
     top: 90%;
     left: 35%;
+  }
+
+  .congrats_page_div p {
+    font-size: 2rem;
   }
 }
 .sp_slide {
@@ -11460,13 +11631,10 @@ a:hover, a:visited, a:link, a:active {
 .sp_left_div1 {
   width: 60rem;
   height: 40rem;
-  background-color: #5c2b26;
   margin-left: 10rem;
   margin-right: 5rem;
   position: absolute;
   left: 0%;
-  border-radius: 10px;
-  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
 }
 
 .sp_left_div1 h1 {
@@ -11495,17 +11663,14 @@ a:hover, a:visited, a:link, a:active {
 .sp_left_div2 {
   width: 60rem;
   height: 40rem;
-  background-color: #5c2b26;
   margin-left: 10rem;
   margin-right: 15rem;
   position: absolute;
   left: 30%;
-  border-radius: 10px;
-  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
 }
 
 .sp_left_div2_inner {
-  width: 90%;
+  width: 95%;
   height: 80%;
   background-color: #a6865b;
   border-radius: 5px;
@@ -11523,14 +11688,11 @@ a:hover, a:visited, a:link, a:active {
 .sp_left_div3 {
   width: 60rem;
   height: 40rem;
-  background-color: #5c2b26;
   margin-left: 10rem;
   margin-right: 15rem;
   position: absolute;
   left: 60%;
   padding: 3rem;
-  border-radius: 10px;
-  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
 }
 
 .sp_left_div3 h1 {
@@ -11587,6 +11749,7 @@ a:hover, a:visited, a:link, a:active {
   .show_page_inner-wrapper {
     transform: none;
     transform-origin: top left;
+    width: 200vw;
   }
 
   .show_page_outer-wrapper {
@@ -11611,6 +11774,10 @@ a:hover, a:visited, a:link, a:active {
   }
 
   .sp_lefthalf {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/images/show_page_images/ultra_wide_test.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
@@ -11624,7 +11791,8 @@ a:hover, a:visited, a:link, a:active {
     margin: 0%;
     left: 0%;
     position: relative;
-    width: 110%;
+    width: 100%;
+    padding: 0%;
     border-radius: 0px;
     padding-top: 7rem;
   }

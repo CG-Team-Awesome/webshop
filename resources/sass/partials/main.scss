@@ -78,16 +78,45 @@ a:hover, a:visited, a:link, a:active{
     border-bottom: 2px solid #401d1a;
 }
 
+
+
 .logout-icon{
     height: 1.5rem;
     width: 1.5rem;
     border-bottom: none;
     filter: invert(12%) sepia(17%) saturate(2233%) hue-rotate(318deg) brightness(89%) contrast(92%);
+    position: relative;
+    right: 1%;
+    top: 5%;
+    transition: 0.2s;
 }
-
 .cart-icon{
     padding: 0%;
     height: 1.5rem;
     width: 1.5rem;
     filter: invert(12%) sepia(17%) saturate(2233%) hue-rotate(318deg) brightness(89%) contrast(92%);
+    position: relative;
+    right: 26%;
+    top: 5%;
+    transition: 0.2s;
+}
+.user-icon{
+    padding: 0%;
+    height: 1.5rem;
+    width: 1.5rem;
+    filter: invert(12%) sepia(17%) saturate(2233%) hue-rotate(318deg) brightness(89%) contrast(92%);
+    position: relative;
+    right: 51%;
+    top: 5%;
+    transition: 0.2s;
+}
+
+.logout-icon:hover{
+    filter: invert(57%) sepia(7%) saturate(2261%) hue-rotate(355deg) brightness(94%) contrast(84%);
+}
+.cart-icon:hover{
+    filter: invert(57%) sepia(7%) saturate(2261%) hue-rotate(355deg) brightness(94%) contrast(84%);
+}
+.user-icon:hover{
+    filter: invert(57%) sepia(7%) saturate(2261%) hue-rotate(355deg) brightness(94%) contrast(84%);
 }
