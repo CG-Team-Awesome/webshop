@@ -2,8 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\ProductImage;
-use App\Models\Product;
+use App\Models\{ProductImage, Product};
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ProductImageFactory extends Factory

@@ -1,4 +1,4 @@
-<div id="mainNavbar" class="container-fluid fixed-top p-4 scrolled">
+<div id="mainNavbar" class="container-fluid fixed-top p-4">
     <div class="col-12">
         <div class="d-flex justify-content-end">
             @if (Route::has('login'))

@@ -2,10 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\Product;
-use App\Models\Supplier;
-use App\Models\TaxGroup;
-use App\Models\Category;
+use App\Models\{Product, Category, Supplier, TaxGroup};
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 
