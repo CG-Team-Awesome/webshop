@@ -1,6 +1,11 @@
 @extends('layout')
 
 @section('content')
+
+
+{{ ddd($_REQUEST); }}
+
+
     <div class="container edit_page d-flex align-items-center">
         <div class="edit_form_div">
             <form method="post" action="/profile">
@@ -9,7 +14,7 @@
 
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="first_name">Voornaam</label>
+                            <label for="first_name">Voornaam DD</label>
                             <input type="text" class="form-control" id="first_name" name="first_name"  value="{{ $user->first_name }}">
                         </div>
                         <div class="form-group col-md-6">
@@ -52,7 +57,10 @@
                             <input type="text" class="form-control" id="inputZip" name="company_name" value="{{ $user->company_name }}">
                         </div>
                     </div>
-
+                    <div class="form-group">
+                        <label for="inputZip">Bedrijfsnaam</label>
+                        <input type="text" class="form-control" id="inputZip" name="role" value="{{ $user->role }}">
+                    </div>
                     <button type="submit" class="btn btn-primary">Bijwerken</button>
             </form>
         </div>
