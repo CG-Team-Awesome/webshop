@@ -49,6 +49,20 @@ class UserController extends Controller
         ]);
             
         return $this->show();
+    }
 
+    public function destroy($id){
+        User::destroy($id);
+
+        return redirect()->route('admin.user.index');
+    }
+
+    public function index(){
+        
+        $users = User::all();
+
+        return view('admin/user/index', [
+            'users' => $users
+        ]);
     }
 }

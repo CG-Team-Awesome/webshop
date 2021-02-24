@@ -30,7 +30,7 @@ class CreateUsersTable extends Migration
             $table->unsignedBigInteger('phone_number')->nullable();
             $table->string('company_name')->nullable();
             $table->timestamps();
-            // $table->softdelete();
+            $table->softdeletes();
 
             $table->foreign('role_id')
                 ->references('id')

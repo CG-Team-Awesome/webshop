@@ -19,7 +19,7 @@ class CreateRolesTable extends Migration
             $table->string('name');
             $table->string('label')->nullable();
 
-			// $table->softdelete();
+			$table->softDeletes();
         });
 
         Schema::create('abilities', function (Blueprint $table) {
@@ -28,7 +28,7 @@ class CreateRolesTable extends Migration
             $table->string('name');
             $table->string('label')->nullable();
 
-			// $table->softdelete();
+			$table->softDeletes();
         });
 
 
@@ -46,7 +46,7 @@ class CreateRolesTable extends Migration
                     ->references('id')
                     ->on('abilities');
 
-			// $table->softdelete();
+			$table->softDeletes();
         });
 
 

@@ -28,6 +28,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('supplier', SupplierController::class);
 });
 
+// Admin: User control
+Route::get('/admin/users/index', [UserController::class, 'index'])->name('admin.users');
+
 // User routes
 Route::get('profile/edit', [UserController::class, 'edit'])->name('profile.edit')
         ->middleware(['auth']);
