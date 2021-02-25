@@ -12,7 +12,6 @@
         {{-- TITLE OF SECTION HORLOGES --}}
         <h1 class="text-white font-weight-bold horloge_title title-font">Horloges</h1>
 
-
         {{-- CONTENT OF SECTION HORLOGES --}}
         {{-- CONTENT OF SECTION HORLOGES --}}
         <div class="row d-flex justify-content-center foreach_watches">
@@ -29,7 +28,6 @@
                     </div>
 
             @endforeach
-
         </div>
 
     </div>
