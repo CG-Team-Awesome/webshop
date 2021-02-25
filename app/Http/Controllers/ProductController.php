@@ -45,9 +45,9 @@ class ProductController extends Controller
      */
     public function store(ProductRequest $request)
     {
-        // TODO |xmh| store stuff
+        $product = Product::create($request->all());
 
-        return redirect()->route('admin.product.show', ['id' => 1]);  // TODO |xmh| use real id
+        return redirect()->route('admin.product.show', ['product' => $product]);
     }
 
     /**
@@ -89,7 +89,9 @@ class ProductController extends Controller
      */
     public function update(ProductRequest $request, $id)
     {
-        //
+        Product::where('id', $id)->update($request->all());
+
+        return redirect()->route('admin.product.show', ['product' => $id]);
     }
 
     /**

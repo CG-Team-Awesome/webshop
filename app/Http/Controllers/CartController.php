@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Product;
 
 class CartController extends Controller
 {
@@ -13,28 +14,36 @@ class CartController extends Controller
      */
     public function index()
     {
-        //
+        if (!session()->has('cart')) {
+            $this->init();
+        }
+
+        return view('cart.index', ['cart' => session('cart')]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    private function init()
     {
-        //
+        session([
+            'cart' => [
+                'amount' => 0,
+                'price' => 0.00,
+                'products' => [],
+            ]
+        ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function addItem($id)
     {
-        //
+        if (!session()->has('cart')) {
+            $this->init();
+        }
+
+        $product = Product::where('id', $id)->first();
+        session()->push('cart.products', ['id' => $product->id,'name' => $product->name, 'price' => $product->price]);
+        session()->increment('cart.amount');
+        session()->increment('cart.price', $product->price);
+
+        return redirect()->route('cart.index');
     }
 
     /**
@@ -56,7 +65,7 @@ class CartController extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
 
     /**

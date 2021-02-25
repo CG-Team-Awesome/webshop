@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{HomeController, ProductController, CategoryController, SupplierController, UserController, RoleController};
+use App\Http\Controllers\{HomeController, CartController, ProductController, CategoryController, SupplierController, UserController, RoleController};
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +19,10 @@ Route::get ('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('product', [ProductController::class, 'index'])->name('product.index');
 Route::get('product/{id}', [ProductController::class, 'show'])->name('product.show');
+
+// CART/ORDER ROUTES
+Route::get('cart', [CartController::class, 'index'])->name('cart.index');
+Route::post('cart/add/{id}', [CartController::class, 'addItem'])->name('cart.addItem');
 
 
 // Admin: Products, Categories and Suppliers
@@ -42,7 +46,7 @@ Route::get('profile', [UserController::class, 'show'])->name('profile.show')
 Route::put('profile', [UserController::class, 'update'])->name('profile.update')
         ->middleware(['auth']);
 
-        
+
 
 
 

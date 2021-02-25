@@ -24,7 +24,18 @@ class ProductRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required'
+            'name' => 'required',
+            'article_number' => 'required',
+            'supplier_id' => 'required',
+            'category_id' => 'required',
+            'name' => 'required',
+            'tagline' => 'required',
+            'description' => 'required',
+            'in_stock' => 'required',
+            'price' => 'required',
+            'tax_group_id' => 'required',
+            'strap_color' => 'required',
+            'size' => 'required',
         ];
     }
 
