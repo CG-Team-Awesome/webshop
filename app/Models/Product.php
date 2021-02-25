@@ -30,4 +30,9 @@ class Product extends Model
     {
         return $this->hasMany(Review::class);
     }
+
+    public function latestReviews()
+    {
+        return $this->hasMany(Review::class)->latest()->limit(2);
+    }
 }
