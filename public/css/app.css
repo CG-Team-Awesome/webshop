@@ -11958,7 +11958,7 @@ a:hover, a:visited, a:link, a:active {
 
 .btn-allpd_back1 {
   position: fixed;
-  left: 10%;
+  left: 3%;
   bottom: 10%;
   z-index: 3;
 }
@@ -11967,8 +11967,16 @@ a:hover, a:visited, a:link, a:active {
   display: none;
 }
 
+.foreach_watches {
+  margin-top: 5rem;
+}
+
 .ap_watches_div {
-  background-color: #592c22;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/images/product_index_page_images/product_watch_background.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -11976,38 +11984,44 @@ a:hover, a:visited, a:link, a:active {
 }
 
 .horloge_title {
-  position: absolute;
-  top: 5%;
-  right: 15%;
+  margin-top: 3rem;
 }
 
 .horloge_card {
-  width: 15rem;
   margin: 2rem;
-  background-color: #a6867b;
+  width: 15%;
+  background-color: #a6865b;
   border-radius: 10px;
   box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
 }
 
+.foreach_belts {
+  margin-top: 3rem;
+}
+
 .ap_belts_div {
-  background-color: #592c22;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/images/product_index_page_images/product_belt_background.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  max-width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   min-height: 100vh;
+  margin: 0%;
 }
 
 .riemen_title {
-  z-index: 2;
-  position: absolute;
-  top: 110%;
-  left: 10%;
+  z-index: 4;
+  margin-top: 3rem;
 }
 
 .riemen_card {
-  width: 15rem;
   margin: 2rem;
-  background-color: #a6867b;
+  width: 15%;
+  background-color: #a6865b;
   border-radius: 10px;
   box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
 }
@@ -12025,16 +12039,21 @@ a:hover, a:visited, a:link, a:active {
     display: block;
   }
 
+  .foreach_watches {
+    margin-top: 1rem;
+    padding: 0%;
+  }
+
   .ap_watches_div {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    width: 100%;
     flex-direction: column;
     padding: 1rem;
   }
 
   .horloge_title {
+    margin-top: 3rem;
     position: relative;
     left: 0%;
     top: 0%;
@@ -12043,6 +12062,11 @@ a:hover, a:visited, a:link, a:active {
   .horloge_card {
     width: 100%;
     margin: 2rem;
+  }
+
+  .foreach_belts {
+    margin-top: 1rem;
+    padding: 0%;
   }
 
   .ap_belts_div {
