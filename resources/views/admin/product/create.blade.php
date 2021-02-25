@@ -71,7 +71,7 @@
             <button type="submit" class="btn btn-success btn-adm-addpd">Add Product</button>
             <button class="btn btn-warning btn-adm-cancelpd2">Cancel</button>
           </form>
-            <a href="/admin/productlist"><button class="btn btn-warning btn-adm-cancelpd">Cancel</button></a>
+            <a href="/admin/product"><button class="btn btn-warning btn-adm-cancelpd">Cancel</button></a>
     <div>
 </div>
 

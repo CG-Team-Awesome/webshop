@@ -56,16 +56,16 @@ require __DIR__ . '/auth.php';
 
 
 //breeze default log-in destination
-Route::view('/dashboard', 'dashboard')
+Route::view('/dashboard', 'admin.dashboard')
         ->middleware(['auth'])->name('dashboard');
 
 // CART views
 Route::view('buy', 'product.buy');
-Route::view('buy2', 'product.buy2');
+Route::view('buy2', 'product.buy2')->middleware(['auth']);
 Route::view('congrats', 'product.congrats');
 
 // ADMIN views
-Route::view('admin', 'admin.login');
+Route::redirect('admin', '/admin/product', 307);
 Route::view('admin/login', 'admin.login');
 Route::view('admin/productlist', 'admin.productlist');
 Route::view('admin/add', 'admin.add');
