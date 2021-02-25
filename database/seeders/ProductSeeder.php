@@ -23,10 +23,10 @@ class ProductSeeder extends Seeder
         Category::create(['name' => 'horloges']);
         Category::create(['name' => 'riemen']);
 
-        Product::factory()->count(50)->create();
+        Product::factory()->count(25)->create();
 
-        ProductImage::factory()->count(200)->create();
-        Review::factory()->count(200)->create();
+        ProductImage::factory()->count(100)->create();
+        Review::factory()->count(100)->create();
 
     }
 }
