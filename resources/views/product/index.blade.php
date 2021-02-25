@@ -5,28 +5,32 @@
 
         {{-- SECTION HORLOGES --}}
         {{-- SECTION HORLOGES --}}
-    <div class="ap_watches_div d-flex justify-content-center align-items-center">
+    <div class="ap_watches_div d-flex justify-content-center align-items-center row">
 
-        <a href="/"><button class="btn btn-primary btn-allpd_back1">Back</button></a>
+        <a href="/"><button class="btn btn-mau shadow-mau btn-allpd_back1">Back</button></a>
         {{-- TITLE OF SECTION HORLOGES --}}
         {{-- TITLE OF SECTION HORLOGES --}}
-        <h1 class="text-white font-weight-bold horloge_title">Horloges</h1>
+        <h1 class="text-white font-weight-bold horloge_title title-font">Horloges</h1>
 
 
         {{-- CONTENT OF SECTION HORLOGES --}}
         {{-- CONTENT OF SECTION HORLOGES --}}
-        @foreach ($watches as $watch)
-        <a href="{{ Route('product.show', $watch->id) }}">
-            <div class="card horloge_card text-center">
-                <img class="card-img-top" src="/images/vincero_brown_gold.webp" alt="Card image cap">
-                <div class="card-body">
-                <h5 class="card-title">{{ $watch->name }}</h5>
-                <p class="card-text">{{ $watch->tagline }}</p>
-                <a href="{{ Route('product.show', $watch->id) }}" class="btn btn-primary mt-2">Go somewhere</a>
-                </div>
-            </div>
-        </a>
-        @endforeach
+        <div class="row d-flex justify-content-center foreach_watches">
+
+            @foreach ($watches as $watch)
+
+                    <div class="card horloge_card text-center col-md-3 m2">
+                            <img class="card-img-top" src="/images/vincero_brown_gold.webp" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title text-white title-font">{{ $watch->name }}</h4>
+                            <h5 class="card-text text-white title-font mb-4">{{ $watch->tagline }}</h5>
+                            <a href="{{ Route('product.show', $watch->id) }}" class="btn btn-mau shadow-mau mt-2">Show</a>
+                        </div>
+                    </div>
+
+            @endforeach
+
+        </div>
 
     </div>
 
@@ -34,30 +38,34 @@
 
         {{-- SECTION RIEMEN --}}
         {{-- SECTION RIEMEN --}}
-    <div class="ap_belts_div d-flex justify-content-center align-items-center">
+    <div class="ap_belts_div d-flex justify-content-center align-items-center row">
 
 
         {{-- TITLE OF SECTION RIEMEN --}}
         {{-- TITLE OF SECTION RIEMEN --}}
-        <h1 class="text-white font-weight-bold riemen_title">Riemen</h1>
+        <h1 class="text-white font-weight-bold title-font riemen_title">Riemen</h1>
 
 
         {{-- SECTION OF SECTION RIEMEN --}}
         {{-- SECTION OF SECTION RIEMEN --}}
-        @foreach ($belts as $belt)
-        <a href="{{ Route('product.show', $belt->id) }}">
-            <div class="card riemen_card text-center">
-                <img class="card-img-top" src="/images/belt_darkbrown.jpg" alt="Card image cap">
-                <div class="card-body">
-                <h5 class="card-title">$belt->name</h5>
-                <p class="card-text">$belt->tagline</p>
-                <a href="#" class="btn btn-primary mt-2">Go somewhere</a>
-                </div>
-            </div>
-        </a>
-        @endforeach
+        <div class="row d-flex justify-content-center foreach_belts">
 
-        <a href="/"><button class="btn btn-primary btn-allpd_back2">Back</button></a>
+            @foreach ($belts as $belt)
+
+                    <div class="card riemen_card text-center col-md-3 m2">
+                            <img class="card-img-top" src="/images/belt_darkbrown.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title text-white title-font">{{ $belt->name }}</h4>
+                            <h5 class="card-text text-white title-font mb-4">{{ $belt->tagline }}</h5>
+                            <a href="{{ Route('product.show', $belt->id) }}" class="btn btn-mau shadow-mau mt-2">Show</a>
+                        </div>
+                    </div>
+
+            @endforeach
+
+        </div>
+
+        <a href="/"><button class="btn btn-mau shadow-mau btn-allpd_back2">Back</button></a>
         </div>
 </div>
 

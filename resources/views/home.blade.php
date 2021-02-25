@@ -48,14 +48,6 @@
                 href="{{ Route('product.show', $product->id) }}"><button
                     class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
         @endforeach
-        {{-- <div class="product_intro_squaredivs1 shadow-mau m-1 col"><a href="{{ Route('product.show','1') }}"><button
-            class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
-    <div class="product_intro_squaredivs2 shadow-mau m-1 col"><a href="{{ Route('product.show','1') }}"><button
-                class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
-    <div class="product_intro_squaredivs3 shadow-mau m-1 col"><a href="{{ Route('product.show','1') }}"><button
-                class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
-    <div class="product_intro_squaredivs4 shadow-mau m-1 col"><a href="{{ Route('product.show','1') }}"><button
-                class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div> --}}
 </div>
 </div>
 
