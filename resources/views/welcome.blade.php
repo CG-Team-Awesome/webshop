@@ -43,7 +43,7 @@
     <div class="product_intro_4square_content_div1 mb-5">
         <p class="text-white pi4cd_text product_intro_text text-center row aln-center col-4 col-6-medium text-font">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Odit sapiente molestias quos asperiores. Doloremque, dignissimos quasi.
+            Odit sapiente bananenbrood quos asperiores. Doloremque, dignissimos quasi.
             Recusandae consequuntur rerum ab laudantium, voluptate sapiente eligendi distinctio ducimus temporibus.
             Omnis, quidem adipisci!
         </p>
