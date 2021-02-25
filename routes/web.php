@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{HomeController, CartController, ProductController, CategoryController, SupplierController, UserController, RoleController};
+use App\Http\Controllers\{HomeController, CartController, ProductController, CategoryController, SupplierController, UserController, RoleController, AdminController};
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +37,57 @@ Route::group(['middleware' => ['auth']], function() {
         Route::resource('roles', RoleController::class);
         Route::resource('users', UserController::class);
 });
+
+
+
+
+
+//Route::group(
+//        [
+//        // 'prefix' => 'admin',
+//       // 'name'=> 'admin.',
+//        'middleware' => 'role:admin',
+//        ]
+//        , function () {
+//    
+//        // for all admins
+//        Route::get('/', 'AdminController@index')->name('dashboard');
+//        Route::get('home', 'AdminController@index')->name('dashboard');
+//        Route::get('dashboard', 'AdminController@index')->name('dashboard');
+//    
+//        // for administrator
+//        Route::group(['middleware' => ['role:administrator']], function () {
+//            //
+//        });
+//    
+//        // for moderators
+//        Route::group(['middleware' => ['role:administrator|moderator']], function () {
+//            // users
+//            Route::group(['prefix' => 'users', 'as' => 'users.',], function () {
+//                Route::get('all', 'UserController@index')->name('index');
+//            });
+//        });
+//    
+//        // for managers
+//        Route::group(['middleware' => ['role:administrator|moderator|manager']], function () {
+//            //
+//        });
+//    
+//    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // User routes
 Route::get('profile/edit', [UserController::class, 'edit'])->name('profile.edit')
