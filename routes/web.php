@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{HomeController, ProductController, CategoryController, SupplierController, UserController, RoleController};
+use App\Http\Controllers\{HomeController, ProductController, CategoryController, SupplierController, UserController, RoleController, AdminController};
 
 /*
 |--------------------------------------------------------------------------
@@ -22,17 +22,68 @@ Route::get('product/{id}', [ProductController::class, 'show'])->name('product.sh
 
 
 // Admin: Products, Categories and Suppliers
-Route::prefix('admin')->name('admin.')->group(function () {
-    Route::resource('product', ProductController::class);
-    Route::resource('category', CategoryController::class);
-    Route::resource('supplier', SupplierController::class);
-});
+// Route::prefix('admin')->name('admin.')->group(function () {
+//     Route::resource('product', ProductController::class);
+//     Route::resource('category', CategoryController::class);
+//     Route::resource('supplier', SupplierController::class);
+// });
 
 // Admin: User en Roles control
-Route::group(['middleware' => ['auth']], function() {
-        Route::resource('roles', RoleController::class);
-        Route::resource('users', UserController::class);
-});
+// Route::group(['middleware' => ['auth']], function() {
+//         Route::resource('roles', RoleController::class);
+//         Route::resource('users', UserController::class);
+// });
+
+
+
+
+
+Route::group(
+        [
+        // 'prefix' => 'admin',
+        // 'name'=> 'admin.',
+        'middleware' => 'role:admin',
+        ]
+        , function () {
+    
+        // for all admins
+        Route::get('/', 'AdminController@index')->name('dashboard');
+        Route::get('home', 'AdminController@index')->name('dashboard');
+        Route::get('dashboard', 'AdminController@index')->name('dashboard');
+    
+        // for administrator
+        Route::group(['middleware' => ['role:administrator']], function () {
+            //
+        });
+    
+        // for moderators
+        Route::group(['middleware' => ['role:administrator|moderator']], function () {
+            // users
+            Route::group(['prefix' => 'users', 'as' => 'users.',], function () {
+                Route::get('all', 'UserController@index')->name('index');
+            });
+        });
+    
+        // for managers
+        Route::group(['middleware' => ['role:administrator|moderator|manager']], function () {
+            //
+        });
+    
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // User routes
 Route::get('profile/edit', [UserController::class, 'edit'])->name('profile.edit')
