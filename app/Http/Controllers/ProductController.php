@@ -89,7 +89,7 @@ class ProductController extends Controller
      */
     public function update(ProductRequest $request, $id)
     {
-        Product::where('id', $id)->update($request->all());
+        Product::where('id', $id)->update($request->validated());
 
         return redirect()->route('admin.product.show', ['product' => $id]);
     }

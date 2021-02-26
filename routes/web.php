@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{HomeController, CartController, ProductController, CategoryController, SupplierController, UserController, RoleController, AdminController};
+use App\Http\Controllers\{HomeController, CartController, ProductController, CategoryController, SupplierController, OrderController, UserController, RoleController, AdminController};
 
 /*
 |--------------------------------------------------------------------------
@@ -23,10 +23,11 @@ Route::get('product/{id}', [ProductController::class, 'show'])->name('product.sh
 // CART/ORDER ROUTES
 Route::get('cart', [CartController::class, 'index'])->name('cart.index');
 Route::post('cart/add/{id}', [CartController::class, 'addItem'])->name('cart.addItem');
+Route::get('order', [OrderController::class, 'create'])->middleware(['auth'])->name('order.create');
 
 
 // Admin: Products, Categories and Suppliers
-Route::prefix('admin')->name('admin.')->group(function () {
+Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () {
     Route::resource('product', ProductController::class);
     Route::resource('category', CategoryController::class);
     Route::resource('supplier', SupplierController::class);
@@ -49,17 +50,17 @@ Route::group(['middleware' => ['auth']], function() {
 //        'middleware' => 'role:admin',
 //        ]
 //        , function () {
-//    
+//
 //        // for all admins
 //        Route::get('/', 'AdminController@index')->name('dashboard');
 //        Route::get('home', 'AdminController@index')->name('dashboard');
 //        Route::get('dashboard', 'AdminController@index')->name('dashboard');
-//    
+//
 //        // for administrator
 //        Route::group(['middleware' => ['role:administrator']], function () {
 //            //
 //        });
-//    
+//
 //        // for moderators
 //        Route::group(['middleware' => ['role:administrator|moderator']], function () {
 //            // users
@@ -67,12 +68,12 @@ Route::group(['middleware' => ['auth']], function() {
 //                Route::get('all', 'UserController@index')->name('index');
 //            });
 //        });
-//    
+//
 //        // for managers
 //        Route::group(['middleware' => ['role:administrator|moderator|manager']], function () {
 //            //
 //        });
-//    
+//
 //    });
 
 
@@ -111,12 +112,12 @@ Route::view('/dashboard', 'admin.dashboard')
         ->middleware(['auth'])->name('dashboard');
 
 // CART views
-Route::view('buy', 'product.buy');
-Route::view('buy2', 'product.buy2')->middleware(['auth']);
+// Route::view('buy', 'product.buy');
+// Route::view('buy2', 'product.buy2')->middleware(['auth']);
 Route::view('congrats', 'product.congrats');
 
 // ADMIN views
-Route::redirect('admin', '/admin/product', 307);
+Route::redirect('admin', '/admin/product', 307)->middleware(['auth']);
 Route::view('admin/login', 'admin.login');
 Route::view('admin/productlist', 'admin.productlist');
 Route::view('admin/add', 'admin.add');

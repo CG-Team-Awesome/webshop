@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Supplier;
-use Illuminate\Http\Request;
+use App\Http\Requests\SupplierRequest;
 
 class SupplierController extends Controller
 {
@@ -35,11 +35,11 @@ class SupplierController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(SupplierRequest $request)
     {
-        // TODO store stuff
+        $supplier = Supplier::create($request->all());
 
-        return redirect()->route('admin.supplier.show', ['id' => 1]);  // TODO use real id
+        return redirect()->route('admin.supplier.show', ['supplier' => $supplier]);
     }
 
     /**
@@ -50,9 +50,11 @@ class SupplierController extends Controller
      */
     public function show($id)
     {
-        $supplier = Supplier::where('id', $id)->first();
+        return redirect()->route('admin.supplier.index');
 
-        return view('admin.supplier.show', ['supplier' => $supplier]);
+        // $supplier = Supplier::where('id', $id)->first();
+
+        // return view('admin.supplier.show', ['supplier' => $supplier]);
     }
 
     /**
@@ -75,11 +77,11 @@ class SupplierController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(SupplierRequest $request, $id)
     {
-        // TODO update stuff
+        Supplier::where('id', $id)->update($request->validated());
 
-        return redirect()->route('admin.supplier.show', ['id' => 1]); // TODO use real id
+        return redirect()->route('admin.supplier.show', ['supplier' => $id]);
     }
 
     /**
