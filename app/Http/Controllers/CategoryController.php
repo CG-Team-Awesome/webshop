@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
-use Illuminate\Http\Request;
-
+use App\Http\Requests\CategoryRequest;
 class CategoryController extends Controller
 {
     /**
@@ -35,11 +34,11 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CategoryRequest $request)
     {
-        // TODO store stuff
+        $category = Category::create($request->all());
 
-        return redirect()->route('admin.category.show', ['id' => 1]);  // TODO use real id
+        return redirect()->route('admin.category.show', ['category' => $category->id]);
     }
 
     /**
@@ -50,9 +49,12 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        $category = Category::where('id', $id)->first();
 
-        return view('admin.category.show', ['category' => $category]);
+        return redirect()->route('admin.category.index');
+
+        // $category = Category::where('id', $id)->first();
+
+        // return view('admin.category.show', ['category' => $category]);
     }
 
     /**
@@ -75,11 +77,11 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CategoryRequest $request, $id)
     {
-        // TODO update stuff
+        Category::where('id', $id)->update($request->validated());
 
-        return redirect()->route('admin.category.show', ['id' => 1]); // TODO use real id
+        return redirect()->route('admin.category.show', ['category' => $id]);
     }
 
     /**

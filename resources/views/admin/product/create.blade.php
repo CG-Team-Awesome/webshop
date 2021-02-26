@@ -1,11 +1,11 @@
-@extends('layout')
+@extends('Adminlayout')
 
 @section('content')
 
 
 <div class="container-fluid adm_pa_main">
 
-    <h1 class="adminh1 text-center">ADMIN PAGE -- Add Product</h1>
+    <h1 class="adminh1 text-center">MaXiRu - Add Product</h1>
     <div class="adm_pa_div1 d-flex justify-content-center align-items-center row">
         <form method="POST" action="{{ Route('admin.product.store') }}">
           @csrf
@@ -18,7 +18,7 @@
               </div>
               <div class="form-group">
                 <label for="article_number">Article number</label>
-                <input type="text" class="form-control" id="article_number" name="article_number" placeholder="RMX Black Leather M">
+                <input type="text" class="form-control" id="article_number" name="article_number">
               </div>
               <div class="form-group">
                 <label for="supplier">Supplier</label>
@@ -71,7 +71,7 @@
             <button type="submit" class="btn btn-success btn-adm-addpd">Add Product</button>
             <button class="btn btn-warning btn-adm-cancelpd2">Cancel</button>
           </form>
-            <a href="/admin/product"><button class="btn btn-warning btn-adm-cancelpd">Cancel</button></a>
+            <a href="{{ Route('admin.product.index') }}"><button class="btn btn-warning btn-adm-cancelpd">Cancel</button></a>
     <div>
 </div>
 

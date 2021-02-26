@@ -3,9 +3,9 @@
         <div class="d-flex justify-content-end">
 
                 <div>
-                    <a href="{{ Route('admin.product.index') }}">Product</a>
-                    <a href="{{ Route('admin.category.index') }}">Category</a>
-                    <a href="{{ Route('admin.supplier.index') }}">Supplier</a>
+                    <a href="{{ Route('admin.product.index') }}"> Products </a>
+                    <a href="{{ Route('admin.category.index') }}"> Categories </a>
+                    <a href="{{ Route('admin.supplier.index') }}"> Suppliers </a>
                     <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 </div>
             @if (Route::has('login'))

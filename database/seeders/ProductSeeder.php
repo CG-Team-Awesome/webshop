@@ -20,8 +20,8 @@ class ProductSeeder extends Seeder
     public function run()
     {
         //first create the categories that the products belong to
-        Category::create(['name' => 'horloges']);
-        Category::create(['name' => 'riemen']);
+        Category::create(['name' => 'horloges', 'description' => 'handgemaakte horloges']);
+        Category::create(['name' => 'riemen', 'description' => 'handgemaakte riemen']);
 
         Product::factory()->count(25)->create();
 

@@ -44,7 +44,7 @@
     </div>
     <div class="product_intro_4square_content_div2 row aln-center d-flex align-items-center">
         @foreach ($products as $product)
-        <div class="product_intro_squaredivs1 shadow-mau m-1 col" style="background-image:url('{{ $product->images->first()->url }}')"><a
+        <div class="product_intro_squaredivs1 shadow-mau m-1 col" style="background-image:url('@if($product->images) {{ $product->images->first()->url }} @else /images/landing_page_images/example_belt_01.jpg @endif')"><a
                 href="{{ Route('product.show', $product->id) }}"><button
                     class="btn squarediv_btn btn-mau shadow-mau">Buy</button></a></div>
         @endforeach

@@ -46,6 +46,9 @@
 
                     <div class="mb-0">
                         <div class="d-flex justify-content-end align-items-baseline">
+                            @if (Route::has('register'))
+                            <a class="text-white mr-3" href="{{ route('register') }}">Register</a>
+                            @endif
                             @if (Route::has('password.request'))
                                 <a class="text-white mr-3" href="{{ route('password.request') }}">
                                     {{ __('Forgot your password?') }}

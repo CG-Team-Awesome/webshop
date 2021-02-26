@@ -1,22 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('Adminlayout')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categorieën</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.23/datatables.min.css" />
-</head>
+@section('content')
+<div class="container-fluid adm_pa_main">
 
-<body>
-    <div class="container mt-4">
+    <h1 class="adminh1 text-center">MaXiRu - Category administration</h1>
+    <div class="adm_pa_div1 d-flex justify-content-center align-items-center row">
+        <div><a href="{{ Route('admin.category.create')}}" class="btn btn-outline-success">New product category</a><br />
         <table class="datatable">
             <thead>
                 <tr>
                     <td>Naam</td>
                     <td>Omschrijving</td>
+                    <td></td><td></td>
                 </tr>
             </thead>
             <tbody>
@@ -35,10 +30,10 @@
                 @endforeach
             </tbody>
         </table>
-    </div>
+    </div></div></div>
+@endsection
 
-
-
+@section('scripts')
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
@@ -54,7 +49,4 @@
             $('.datatable').DataTable();
         } );
     </script>
-
-</body>
-
-</html>
+@endsection

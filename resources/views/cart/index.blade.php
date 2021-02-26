@@ -70,7 +70,7 @@
                 </div>
 
             </div>
-                <a href="/buy2" class="btn">
+                <a href="{{ Route('order.create') }}" class="btn">
                     <button class="bp_div3_cont btn btn-mau shadow-mau">Continue</button>
                 </a>
             <a href="/"><button class="btn bp_btn_back2 btn-mau shadow-mau">Back</button></a>

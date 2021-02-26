@@ -10,6 +10,12 @@ class Supplier extends Model
 {
     use HasFactory, SoftDeletes;
 
+    protected $fillable = ['name',
+    'address',
+    'city',
+    'postal_code',
+    'country'];
+
     public function products()
     {
         return $this->hasMany(Product::class);
